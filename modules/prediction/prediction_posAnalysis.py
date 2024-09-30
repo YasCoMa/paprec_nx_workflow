@@ -21,7 +21,7 @@ def pr_auc_score(ytrue, ypred, **kwargs):
 
 class PredictionAnalysis:
 
-	def __init__(self, rootFolder, modelsFolder, dataset_id ):
+	def __init__(self, rootFolder, modelsFolder, dataset_id, source ):
 		self.ds = Dataset( rootFolder )
 
 		self.root = rootFolder
@@ -32,7 +32,10 @@ class PredictionAnalysis:
 			os.mkdir(self.resultsFolder)
 
 		with open( os.path.join(rootFolder, 'testset_combinations.json'), 'r' ) as g:
-			self.pairs = json.load(g)[dataset_id.replace('_epitope','').replace('_protein','')]
+			auxid = dataset_id
+			if( source == 'predictor'):
+				auxid = '_'.join( dataset_id.split('_')[:-1] )
+			self.pairs = json.load(g)[ auxid ]
 
 	def _load_local_models_list(self):
 		methods = []

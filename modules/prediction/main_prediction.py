@@ -86,7 +86,7 @@ class Prediction:
 
 						i=0
 						for d in dss:
-							_ide = f"{d},{goldenset_path}"
+							_ide = f"{d},{goldenset_path},{source}"
 							valid_queue.add(_ide)
 							i+=1
 
@@ -119,11 +119,11 @@ class Prediction:
 		goldenset_path = ''
 		if( args.execution_mode >= 2 ):
 			task_id = args.setup_instance.split('/')[-1].split('.')[0]
-			dataset, goldenset_path = open( args.setup_instance ).read().split('\n')[0].split(',')
+			dataset, goldenset_path, source = open( args.setup_instance ).read().split('\n')[0].split(',')
 			
 			best_models_folder = os.path.join(self.dataDir, 'best_trained_models')
 
-			execo = PredictionAnalysis( self.dataDir, best_models_folder, dataset)
+			execo = PredictionAnalysis( self.dataDir, best_models_folder, dataset, source)
 				
 		if( args.execution_mode == 2 ):
 			execo.perform_prediction(  )
@@ -131,7 +131,7 @@ class Prediction:
 		
 		if( args.execution_mode == 3 ):
 			if( goldenset_path != ''):
-				global_model, model_id = execo.perform_comparison( goldenset_path )
+				global_model, model_id = execo.perform_comparison( goldenset_path, source )
 			self._mark_as_ready('comparison', task_id)
 		
 from argparse import RawTextHelpFormatter
