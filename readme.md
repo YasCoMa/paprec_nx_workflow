@@ -13,7 +13,6 @@ We have developed a comprehensive pipeline for comparing models used in antigeni
 	title="PAPC pipeline" width="550px" />
 </div>
 
-The screening workflow 
 
 ## Requirements:
 * The packages are stated in the environment's exported file: paprec_env.yml
