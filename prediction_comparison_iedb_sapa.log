@@ -1,0 +1,136 @@
+Sep-30 17:28:57.022 [main] DEBUG nextflow.cli.Launcher - $> nextflow -log prediction_comparison_iedb_sapa.log -bg run main.nf
+Sep-30 17:28:57.219 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 24.04.4
+Sep-30 17:28:57.245 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/ymartins/.nextflow/plugins; core-plugins: nf-amazon@2.5.3,nf-azure@1.6.1,nf-cloudcache@0.4.1,nf-codecommit@0.2.1,nf-console@1.1.3,nf-ga4gh@1.3.0,nf-google@1.13.2-patch1,nf-tower@1.9.1,nf-wave@1.4.2-patch1
+Sep-30 17:28:57.270 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Sep-30 17:28:57.273 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Sep-30 17:28:57.278 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Sep-30 17:28:57.303 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Sep-30 17:28:57.334 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/nextflow.config
+Sep-30 17:28:57.338 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/nextflow.config
+Sep-30 17:28:57.388 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/ymartins/.nextflow/secrets/store.json
+Sep-30 17:28:57.393 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@5d05ef57] - activable => nextflow.secret.LocalSecretsProvider@5d05ef57
+Sep-30 17:28:57.403 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Sep-30 17:28:58.185 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
+Sep-30 17:28:58.209 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [golden_ardinghelli] DSL2 - revision: 4668c0dc15
+Sep-30 17:28:58.211 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Sep-30 17:28:58.212 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Sep-30 17:28:58.317 [main] DEBUG nextflow.Session - Session UUID: 3f324eb8-c204-4b01-a963-3a5824a08846
+Sep-30 17:28:58.318 [main] DEBUG nextflow.Session - Run name: golden_ardinghelli
+Sep-30 17:28:58.319 [main] DEBUG nextflow.Session - Executor pool size: 8
+Sep-30 17:28:58.336 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Sep-30 17:28:58.349 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Sep-30 17:28:58.390 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 24.04.4 build 5917
+  Created: 01-08-2024 07:05 UTC (09:05 CEST)
+  System: Linux 5.15.0-119-generic
+  Runtime: Groovy 4.0.21 on OpenJDK 64-Bit Server VM 17.0.11-internal+0-adhoc..src
+  Encoding: UTF-8 (UTF-8)
+  Process: 2338729@murakami [127.0.0.1]
+  CPUs: 8 - Mem: 15.5 GB (1.3 GB) - Swap: 16 GB (2.4 GB)
+Sep-30 17:28:58.458 [main] DEBUG nextflow.Session - Work-dir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work [nfs]
+Sep-30 17:28:58.459 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/bin
+Sep-30 17:28:58.472 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Sep-30 17:28:58.505 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Sep-30 17:28:58.560 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Sep-30 17:28:58.576 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+Sep-30 17:28:58.719 [main] DEBUG nextflow.Session - Session start
+Sep-30 17:28:59.247 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Sep-30 17:28:59.894 [main] INFO  nextflow.Nextflow -  P A P R E C  -  P I P E L I N E
+ ===================================
+ dataDir       : /aloy/home/ymartins/paprec_2024_revision/paprec_data
+ runningConfig : /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/running_config.json
+ mode          : test 
+ execution_step: 3 
+ 
+Sep-30 17:28:59.975 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Sep-30 17:28:59.976 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sep-30 17:28:59.987 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Sep-30 17:28:59.996 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=15.5 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Sep-30 17:29:00.002 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Sep-30 17:29:00.274 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Sep-30 17:29:00.274 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sep-30 17:29:00.311 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Sep-30 17:29:00.311 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sep-30 17:29:00.315 [main] DEBUG nextflow.processor.TaskProcessor - Creating *combiner* operator for each param(s) at index(es): [2]
+Sep-30 17:29:00.371 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Sep-30 17:29:00.371 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sep-30 17:29:00.374 [main] DEBUG nextflow.processor.TaskProcessor - Creating *combiner* operator for each param(s) at index(es): [2]
+Sep-30 17:29:00.383 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: PROCESS_FilterOverlappingHumanProteome, PROCESS_PrepareFinalFiles, Prediction_STEP:PROCESS_SplitTasks, setEnvironment, PROCESS_Prediction, Prediction_STEP:PROCESS_Comparison, PROCESS_FeatureSelectionGeneralModel, PROCESS_ParsePredictionResults, PROCESS_SplitTasks, PROCESS_FilterOverlappingViolinet, PROCESS_EvaluationPipelineRanking, PROCESS_SplitPreProcessTasks, Prediction_STEP:PROCESS_Prediction, PROCESS_FilterOverlappingIedbEpitope, PROCESS_FilterRank, PROCESS_TransformDatasets, PROCESS_FilterAllelePromiscuity, PROCESS_Comparison
+Sep-30 17:29:00.384 [main] DEBUG nextflow.Session - Igniting dataflow network (6)
+Sep-30 17:29:00.385 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > setEnvironment
+Sep-30 17:29:00.386 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > Prediction_STEP:PROCESS_SplitTasks
+Sep-30 17:29:00.386 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > Prediction_STEP:PROCESS_Prediction
+Sep-30 17:29:00.387 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > Prediction_STEP:PROCESS_Prediction
+Sep-30 17:29:00.388 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > Prediction_STEP:PROCESS_Comparison
+Sep-30 17:29:00.389 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > Prediction_STEP:PROCESS_Comparison
+Sep-30 17:29:00.391 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_358297ab33fc2070: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/./modules/data_preprocessing/main.nf
+  Script_85452f09746e8ea8: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/./modules/feature_extraction_methods/main.nf
+  Script_9d167622febcc9f0: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/./modules/evaluation/main.nf
+  Script_41cf182fe5b072c8: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/main.nf
+  Script_b2c45278ddc198ed: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/./modules/prediction/main.nf
+Sep-30 17:29:00.391 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Sep-30 17:29:00.391 [main] DEBUG nextflow.Session - Session await
+Sep-30 17:29:00.731 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-30 17:29:00.735 [Task submitter] INFO  nextflow.Session - [1f/d133e5] Submitted process > Prediction_STEP:PROCESS_SplitTasks
+Sep-30 17:29:04.468 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: Prediction_STEP:PROCESS_SplitTasks; status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/1f/d133e572d420c161603fd7cc9f25a1]
+Sep-30 17:29:04.470 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Sep-30 17:29:04.480 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-30 17:29:04.481 [Task submitter] INFO  nextflow.Session - [db/20dde8] Submitted process > setEnvironment
+Sep-30 17:29:04.504 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: setEnvironment; status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/db/20dde867dc78b10548fab580b84d23]
+Sep-30 17:29:05.221 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-30 17:29:05.222 [Task submitter] INFO  nextflow.Session - [1e/f0b39b] Submitted process > Prediction_STEP:PROCESS_Prediction (5)
+Sep-30 17:29:07.439 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: Prediction_STEP:PROCESS_Prediction (5); status: COMPLETED; exit: 1; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/1e/f0b39b8388af69bac4ed58f1708451]
+Sep-30 17:29:07.445 [TaskFinalizer-3] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=Prediction_STEP:PROCESS_Prediction (5); work-dir=/aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/1e/f0b39b8388af69bac4ed58f1708451
+  error [nextflow.exception.ProcessFailedException]: Process `Prediction_STEP:PROCESS_Prediction (5)` terminated with an error exit status (1)
+Sep-30 17:29:07.448 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-30 17:29:07.449 [Task submitter] INFO  nextflow.Session - [e0/709e8f] Submitted process > Prediction_STEP:PROCESS_Prediction (6)
+Sep-30 17:29:07.479 [TaskFinalizer-3] ERROR nextflow.processor.TaskProcessor - Error executing process > 'Prediction_STEP:PROCESS_Prediction (5)'
+
+Caused by:
+  Process `Prediction_STEP:PROCESS_Prediction (5)` terminated with an error exit status (1)
+
+
+Command executed:
+
+  python3 $paprecPath/modules/prediction/main_prediction.py -em 2 -dataDir paprec_data -paramFile running_config.json -setup /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/1f/d133e572d420c161603fd7cc9f25a1/paprec_data/tmp/prediction/tasks/task_5.csv
+
+Command exit status:
+  1
+
+Command output:
+  (empty)
+
+Command error:
+  Traceback (most recent call last):
+    File "/aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/modules/prediction/main_prediction.py", line 153, in <module>
+      o.run(args)
+    File "/aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/modules/prediction/main_prediction.py", line 126, in run
+      execo = PredictionAnalysis( self.dataDir, best_models_folder, dataset)
+    File "/aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/modules/prediction/prediction_posAnalysis.py", line 35, in __init__
+      self.pairs = json.load(g)[dataset_id.replace('_epitope','').replace('_protein','')]
+  KeyError: 'saureus_iedb'
+
+Work dir:
+  /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/1e/f0b39b8388af69bac4ed58f1708451
+
+Tip: view the complete command output by changing to the process work dir and entering the command `cat .command.out`
+Sep-30 17:29:07.485 [TaskFinalizer-3] DEBUG nextflow.Session - Session aborted -- Cause: Process `Prediction_STEP:PROCESS_Prediction (5)` terminated with an error exit status (1)
+Sep-30 17:29:07.514 [TaskFinalizer-3] DEBUG nextflow.Session - The following nodes are still active:
+[process] Prediction_STEP:PROCESS_Comparison
+  status=ACTIVE
+  port 0: (value) bound ; channel: outDir
+  port 1: (value) bound ; channel: parameterFile
+  port 2: (value) bound ; channel: __$eachinparam<2>
+  port 3: (value) OPEN  ; channel: flow
+  port 4: (cntrl) -     ; channel: $
+
+Sep-30 17:29:07.516 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Sep-30 17:29:07.520 [main] DEBUG nextflow.Session - Session await > all processes finished
+Sep-30 17:29:07.520 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Sep-30 17:29:07.524 [main] INFO  nextflow.Nextflow - Oops .. something went wrong
+Sep-30 17:29:07.528 [main] WARN  n.processor.TaskPollingMonitor - Killing running tasks (1)
+Sep-30 17:29:07.547 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=2; failedCount=1; ignoredCount=0; cachedCount=0; pendingCount=6; submittedCount=1; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=18.2s; failedDuration=10.7s; cachedDuration=0ms;loadCpus=-5; loadMemory=0; peakRunning=2; peakCpus=10; peakMemory=0; ]
+Sep-30 17:29:07.560 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Sep-30 17:29:07.601 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

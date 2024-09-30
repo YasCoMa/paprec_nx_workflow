@@ -1,0 +1,158 @@
+Sep-30 15:09:10.840 [main] DEBUG nextflow.cli.Launcher - $> nextflow -log feat_ext_test_iedbSet.log -bg run main.nf
+Sep-30 15:09:10.992 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 24.04.4
+Sep-30 15:09:11.014 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/ymartins/.nextflow/plugins; core-plugins: nf-amazon@2.5.3,nf-azure@1.6.1,nf-cloudcache@0.4.1,nf-codecommit@0.2.1,nf-console@1.1.3,nf-ga4gh@1.3.0,nf-google@1.13.2-patch1,nf-tower@1.9.1,nf-wave@1.4.2-patch1
+Sep-30 15:09:11.029 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Sep-30 15:09:11.031 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Sep-30 15:09:11.034 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Sep-30 15:09:11.054 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Sep-30 15:09:11.079 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/nextflow.config
+Sep-30 15:09:11.082 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/nextflow.config
+Sep-30 15:09:11.126 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/ymartins/.nextflow/secrets/store.json
+Sep-30 15:09:11.131 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@213deac2] - activable => nextflow.secret.LocalSecretsProvider@213deac2
+Sep-30 15:09:11.139 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Sep-30 15:09:11.764 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
+Sep-30 15:09:11.780 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [nasty_jang] DSL2 - revision: 2575a70681
+Sep-30 15:09:11.782 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Sep-30 15:09:11.782 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Sep-30 15:09:11.850 [main] DEBUG nextflow.Session - Session UUID: 92b7e164-e038-4424-a992-3ca7a8c96c32
+Sep-30 15:09:11.850 [main] DEBUG nextflow.Session - Run name: nasty_jang
+Sep-30 15:09:11.851 [main] DEBUG nextflow.Session - Executor pool size: 8
+Sep-30 15:09:11.861 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Sep-30 15:09:11.870 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Sep-30 15:09:11.898 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 24.04.4 build 5917
+  Created: 01-08-2024 07:05 UTC (09:05 CEST)
+  System: Linux 5.15.0-119-generic
+  Runtime: Groovy 4.0.21 on OpenJDK 64-Bit Server VM 17.0.11-internal+0-adhoc..src
+  Encoding: UTF-8 (UTF-8)
+  Process: 2314311@murakami [127.0.0.1]
+  CPUs: 8 - Mem: 15.5 GB (172.6 MB) - Swap: 16 GB (2.7 GB)
+Sep-30 15:09:11.937 [main] DEBUG nextflow.Session - Work-dir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work [nfs]
+Sep-30 15:09:11.938 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/bin
+Sep-30 15:09:11.949 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Sep-30 15:09:11.959 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Sep-30 15:09:11.994 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Sep-30 15:09:12.006 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+Sep-30 15:09:12.091 [main] DEBUG nextflow.Session - Session start
+Sep-30 15:09:12.449 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Sep-30 15:09:12.867 [main] INFO  nextflow.Nextflow -  P A P R E C  -  P I P E L I N E
+ ===================================
+ dataDir       : /aloy/home/ymartins/paprec_2024_revision/paprec_data
+ runningConfig : /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/running_config.json
+ mode          : test 
+ execution_step: 2 
+ 
+Sep-30 15:09:12.917 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Sep-30 15:09:12.918 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sep-30 15:09:12.926 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Sep-30 15:09:12.932 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=15.5 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Sep-30 15:09:12.935 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Sep-30 15:09:13.070 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Sep-30 15:09:13.070 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sep-30 15:09:13.100 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Sep-30 15:09:13.101 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sep-30 15:09:13.103 [main] DEBUG nextflow.processor.TaskProcessor - Creating *combiner* operator for each param(s) at index(es): [2]
+Sep-30 15:09:13.118 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: FeaturesExtraction_STEP:PROCESS_SplitTasks, PROCESS_FilterOverlappingHumanProteome, PROCESS_PrepareFinalFiles, PROCESS_Prediction, setEnvironment, PROCESS_FeatureSelectionGeneralModel, PROCESS_ParsePredictionResults, PROCESS_SplitTasks, PROCESS_FilterOverlappingViolinet, PROCESS_EvaluationPipelineRanking, PROCESS_SplitPreProcessTasks, FeaturesExtraction_STEP:PROCESS_TransformDatasets, PROCESS_FilterOverlappingIedbEpitope, PROCESS_FilterRank, PROCESS_TransformDatasets, PROCESS_FilterAllelePromiscuity, PROCESS_Comparison
+Sep-30 15:09:13.119 [main] DEBUG nextflow.Session - Igniting dataflow network (4)
+Sep-30 15:09:13.120 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > setEnvironment
+Sep-30 15:09:13.121 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FeaturesExtraction_STEP:PROCESS_SplitTasks
+Sep-30 15:09:13.121 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FeaturesExtraction_STEP:PROCESS_TransformDatasets
+Sep-30 15:09:13.122 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > FeaturesExtraction_STEP:PROCESS_TransformDatasets
+Sep-30 15:09:13.123 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_358297ab33fc2070: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/./modules/data_preprocessing/main.nf
+  Script_85452f09746e8ea8: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/./modules/feature_extraction_methods/main.nf
+  Script_1b3ba987d3114b2e: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/main.nf
+  Script_9d167622febcc9f0: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/./modules/evaluation/main.nf
+  Script_b2c45278ddc198ed: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/./modules/prediction/main.nf
+Sep-30 15:09:13.123 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Sep-30 15:09:13.124 [main] DEBUG nextflow.Session - Session await
+Sep-30 15:09:13.317 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-30 15:09:13.320 [Task submitter] INFO  nextflow.Session - [30/11b7b6] Submitted process > FeaturesExtraction_STEP:PROCESS_SplitTasks
+Sep-30 15:09:22.675 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: FeaturesExtraction_STEP:PROCESS_SplitTasks; status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/30/11b7b639c7ba04a3eefc2ef850127a]
+Sep-30 15:09:22.677 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Sep-30 15:09:22.700 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-30 15:09:22.701 [Task submitter] INFO  nextflow.Session - [c2/ab50aa] Submitted process > setEnvironment
+Sep-30 15:09:22.724 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: setEnvironment; status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/c2/ab50aaa30367291c773b3621fa55a6]
+Sep-30 15:09:23.185 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-30 15:09:23.186 [Task submitter] INFO  nextflow.Session - [77/7ea689] Submitted process > FeaturesExtraction_STEP:PROCESS_TransformDatasets (1)
+Sep-30 15:09:28.138 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: FeaturesExtraction_STEP:PROCESS_TransformDatasets (1); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/77/7ea689da6cd7ead6a2ec00e4bee6c0]
+Sep-30 15:09:28.148 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-30 15:09:28.148 [Task submitter] INFO  nextflow.Session - [81/06b2c0] Submitted process > FeaturesExtraction_STEP:PROCESS_TransformDatasets (5)
+Sep-30 15:09:32.844 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: FeaturesExtraction_STEP:PROCESS_TransformDatasets (5); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/81/06b2c0a496c4bd41726772d4c9596f]
+Sep-30 15:09:32.852 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-30 15:09:32.852 [Task submitter] INFO  nextflow.Session - [16/75e666] Submitted process > FeaturesExtraction_STEP:PROCESS_TransformDatasets (8)
+Sep-30 15:09:37.669 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: FeaturesExtraction_STEP:PROCESS_TransformDatasets (8); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/16/75e66685cbd34d18f99aac39a6eca5]
+Sep-30 15:09:37.676 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-30 15:09:37.677 [Task submitter] INFO  nextflow.Session - [97/91be15] Submitted process > FeaturesExtraction_STEP:PROCESS_TransformDatasets (7)
+Sep-30 15:09:42.614 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: FeaturesExtraction_STEP:PROCESS_TransformDatasets (7); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/97/91be156f62be58284c799f2d53d472]
+Sep-30 15:09:42.621 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-30 15:09:42.622 [Task submitter] INFO  nextflow.Session - [72/939d11] Submitted process > FeaturesExtraction_STEP:PROCESS_TransformDatasets (2)
+Sep-30 15:09:47.076 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: FeaturesExtraction_STEP:PROCESS_TransformDatasets (2); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/72/939d11468354121aff7b5a9760c085]
+Sep-30 15:09:47.083 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-30 15:09:47.083 [Task submitter] INFO  nextflow.Session - [c4/b11ac4] Submitted process > FeaturesExtraction_STEP:PROCESS_TransformDatasets (4)
+Sep-30 15:09:51.720 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: FeaturesExtraction_STEP:PROCESS_TransformDatasets (4); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/c4/b11ac48a6d70220b0515dac3ec67c4]
+Sep-30 15:09:51.727 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-30 15:09:51.728 [Task submitter] INFO  nextflow.Session - [32/972b3e] Submitted process > FeaturesExtraction_STEP:PROCESS_TransformDatasets (9)
+Sep-30 15:09:56.829 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 11; name: FeaturesExtraction_STEP:PROCESS_TransformDatasets (9); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/32/972b3e0002be66b0b78672dc99dcc8]
+Sep-30 15:09:56.847 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-30 15:09:56.847 [Task submitter] INFO  nextflow.Session - [95/2b9179] Submitted process > FeaturesExtraction_STEP:PROCESS_TransformDatasets (6)
+Sep-30 15:10:02.047 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: FeaturesExtraction_STEP:PROCESS_TransformDatasets (6); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/95/2b9179b6136e1d9f6c98aac1dd0b41]
+Sep-30 15:10:02.069 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-30 15:10:02.069 [Task submitter] INFO  nextflow.Session - [70/2c56ce] Submitted process > FeaturesExtraction_STEP:PROCESS_TransformDatasets (3)
+Sep-30 15:10:07.220 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: FeaturesExtraction_STEP:PROCESS_TransformDatasets (3); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/70/2c56ceb200c7dcb429c50010747a3b]
+Sep-30 15:10:07.228 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-30 15:10:07.229 [Task submitter] INFO  nextflow.Session - [f6/ca0038] Submitted process > FeaturesExtraction_STEP:PROCESS_TransformDatasets (10)
+Sep-30 15:10:11.987 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: FeaturesExtraction_STEP:PROCESS_TransformDatasets (10); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/f6/ca0038e2a857006a349d5f7582250a]
+Sep-30 15:10:11.995 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-30 15:10:11.995 [Task submitter] INFO  nextflow.Session - [fb/b8fc6f] Submitted process > FeaturesExtraction_STEP:PROCESS_TransformDatasets (11)
+Sep-30 15:10:17.623 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: FeaturesExtraction_STEP:PROCESS_TransformDatasets (11); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/fb/b8fc6f996171517d51e1af75bc5cc4]
+Sep-30 15:10:17.651 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-30 15:10:17.652 [Task submitter] INFO  nextflow.Session - [95/aa5afc] Submitted process > FeaturesExtraction_STEP:PROCESS_TransformDatasets (13)
+Sep-30 15:10:24.534 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 15; name: FeaturesExtraction_STEP:PROCESS_TransformDatasets (13); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/95/aa5afcbd819eb632d5d74974e501ff]
+Sep-30 15:10:24.544 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-30 15:10:24.544 [Task submitter] INFO  nextflow.Session - [bc/fcf202] Submitted process > FeaturesExtraction_STEP:PROCESS_TransformDatasets (12)
+Sep-30 15:10:29.883 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 14; name: FeaturesExtraction_STEP:PROCESS_TransformDatasets (12); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/bc/fcf2023018b50e6c07a416b868208e]
+Sep-30 15:10:29.893 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-30 15:10:29.893 [Task submitter] INFO  nextflow.Session - [e5/7d4541] Submitted process > FeaturesExtraction_STEP:PROCESS_TransformDatasets (16)
+Sep-30 15:10:35.205 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 18; name: FeaturesExtraction_STEP:PROCESS_TransformDatasets (16); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/e5/7d4541deaa4a47b97f40f4ab298782]
+Sep-30 15:10:35.214 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-30 15:10:35.215 [Task submitter] INFO  nextflow.Session - [07/284763] Submitted process > FeaturesExtraction_STEP:PROCESS_TransformDatasets (17)
+Sep-30 15:10:40.018 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 19; name: FeaturesExtraction_STEP:PROCESS_TransformDatasets (17); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/07/28476300b90b2d1cb650f910317b80]
+Sep-30 15:10:40.029 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-30 15:10:40.029 [Task submitter] INFO  nextflow.Session - [fd/71e4a2] Submitted process > FeaturesExtraction_STEP:PROCESS_TransformDatasets (19)
+Sep-30 15:10:45.478 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 21; name: FeaturesExtraction_STEP:PROCESS_TransformDatasets (19); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/fd/71e4a2b85ca18a9234effe9df7a4e2]
+Sep-30 15:10:45.486 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-30 15:10:45.486 [Task submitter] INFO  nextflow.Session - [30/658c25] Submitted process > FeaturesExtraction_STEP:PROCESS_TransformDatasets (20)
+Sep-30 15:10:52.089 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 22; name: FeaturesExtraction_STEP:PROCESS_TransformDatasets (20); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/30/658c25520b5243859d3cad07d1d419]
+Sep-30 15:10:52.097 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-30 15:10:52.097 [Task submitter] INFO  nextflow.Session - [12/5ace68] Submitted process > FeaturesExtraction_STEP:PROCESS_TransformDatasets (15)
+Sep-30 15:10:56.707 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 17; name: FeaturesExtraction_STEP:PROCESS_TransformDatasets (15); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/12/5ace68a77387689ce52fd6bc6a03be]
+Sep-30 15:10:56.715 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-30 15:10:56.716 [Task submitter] INFO  nextflow.Session - [fc/e541ae] Submitted process > FeaturesExtraction_STEP:PROCESS_TransformDatasets (18)
+Sep-30 15:11:01.896 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 20; name: FeaturesExtraction_STEP:PROCESS_TransformDatasets (18); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/fc/e541ae39a175dbd7fb8cf40850e831]
+Sep-30 15:11:01.904 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-30 15:11:01.904 [Task submitter] INFO  nextflow.Session - [3b/61c44a] Submitted process > FeaturesExtraction_STEP:PROCESS_TransformDatasets (21)
+Sep-30 15:11:09.082 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 23; name: FeaturesExtraction_STEP:PROCESS_TransformDatasets (21); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/3b/61c44a10e03e327a6a1b44146034c6]
+Sep-30 15:11:09.108 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-30 15:11:09.109 [Task submitter] INFO  nextflow.Session - [f8/7b2cf6] Submitted process > FeaturesExtraction_STEP:PROCESS_TransformDatasets (14)
+Sep-30 15:11:16.963 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 16; name: FeaturesExtraction_STEP:PROCESS_TransformDatasets (14); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/f8/7b2cf6955d2c968b9a67ddd800e39b]
+Sep-30 15:11:16.980 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-30 15:11:16.981 [Task submitter] INFO  nextflow.Session - [47/4a3bf2] Submitted process > FeaturesExtraction_STEP:PROCESS_TransformDatasets (23)
+Sep-30 15:11:26.417 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 25; name: FeaturesExtraction_STEP:PROCESS_TransformDatasets (23); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/47/4a3bf25a0bc3de4ea4356d8b221ebc]
+Sep-30 15:11:26.424 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-30 15:11:26.424 [Task submitter] INFO  nextflow.Session - [4c/322f08] Submitted process > FeaturesExtraction_STEP:PROCESS_TransformDatasets (24)
+Sep-30 15:11:35.395 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 26; name: FeaturesExtraction_STEP:PROCESS_TransformDatasets (24); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/4c/322f0806fec3873b69c6283028579e]
+Sep-30 15:11:35.429 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-30 15:11:35.429 [Task submitter] INFO  nextflow.Session - [ac/cc69e7] Submitted process > FeaturesExtraction_STEP:PROCESS_TransformDatasets (22)
+Sep-30 15:11:47.925 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 24; name: FeaturesExtraction_STEP:PROCESS_TransformDatasets (22); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/ac/cc69e7435bffa25ceae23dda9fa556]
+Sep-30 15:11:47.931 [main] DEBUG nextflow.Session - Session await > all processes finished
+Sep-30 15:11:48.028 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Sep-30 15:11:48.028 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Sep-30 15:11:48.033 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
+Sep-30 15:11:48.041 [main] INFO  nextflow.Nextflow - 
+Done! Models were trained and evaluated!
+
+Sep-30 15:11:48.045 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=26; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=12m 39s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=2; peakCpus=10; peakMemory=0; ]
+Sep-30 15:11:48.082 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Sep-30 15:11:48.153 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Sep-30 15:11:48.153 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

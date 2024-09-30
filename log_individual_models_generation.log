@@ -1,0 +1,461 @@
+Sep-28 03:20:13.562 [main] DEBUG nextflow.cli.Launcher - $> nextflow -bg run main.nf
+Sep-28 03:20:13.781 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 24.04.4
+Sep-28 03:20:13.813 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/ymartins/.nextflow/plugins; core-plugins: nf-amazon@2.5.3,nf-azure@1.6.1,nf-cloudcache@0.4.1,nf-codecommit@0.2.1,nf-console@1.1.3,nf-ga4gh@1.3.0,nf-google@1.13.2-patch1,nf-tower@1.9.1,nf-wave@1.4.2-patch1
+Sep-28 03:20:13.843 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Sep-28 03:20:13.847 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Sep-28 03:20:13.852 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Sep-28 03:20:13.885 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Sep-28 03:20:13.925 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/nextflow.config
+Sep-28 03:20:13.930 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/nextflow.config
+Sep-28 03:20:13.978 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/ymartins/.nextflow/secrets/store.json
+Sep-28 03:20:13.983 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@7e97551f] - activable => nextflow.secret.LocalSecretsProvider@7e97551f
+Sep-28 03:20:13.993 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Sep-28 03:20:14.847 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
+Sep-28 03:20:14.876 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [lethal_bernard] DSL2 - revision: 7691758de4
+Sep-28 03:20:14.880 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Sep-28 03:20:14.881 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Sep-28 03:20:14.956 [main] DEBUG nextflow.Session - Session UUID: 5ac52234-985d-40a2-b9a4-3ac046d7c8a6
+Sep-28 03:20:14.956 [main] DEBUG nextflow.Session - Run name: lethal_bernard
+Sep-28 03:20:14.957 [main] DEBUG nextflow.Session - Executor pool size: 8
+Sep-28 03:20:14.967 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Sep-28 03:20:14.974 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Sep-28 03:20:15.018 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 24.04.4 build 5917
+  Created: 01-08-2024 07:05 UTC (09:05 CEST)
+  System: Linux 5.15.0-119-generic
+  Runtime: Groovy 4.0.21 on OpenJDK 64-Bit Server VM 17.0.11-internal+0-adhoc..src
+  Encoding: UTF-8 (UTF-8)
+  Process: 1052680@murakami [127.0.0.1]
+  CPUs: 8 - Mem: 15.5 GB (2.6 GB) - Swap: 16 GB (2.6 GB)
+Sep-28 03:20:15.122 [main] DEBUG nextflow.Session - Work-dir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work [nfs]
+Sep-28 03:20:15.123 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/bin
+Sep-28 03:20:15.140 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Sep-28 03:20:15.160 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Sep-28 03:20:15.204 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Sep-28 03:20:15.219 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+Sep-28 03:20:15.424 [main] DEBUG nextflow.Session - Session start
+Sep-28 03:20:15.870 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Sep-28 03:20:16.297 [main] INFO  nextflow.Nextflow -  P A P R E C  -  P I P E L I N E
+ ===================================
+ dataDir       : /aloy/home/ymartins/paprec_2024_revision/paprec_data
+ runningConfig : /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/running_config.json
+ mode          : train 
+ execution_step: 3 
+ 
+Sep-28 03:20:16.348 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Sep-28 03:20:16.349 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sep-28 03:20:16.356 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Sep-28 03:20:16.363 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=15.5 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Sep-28 03:20:16.367 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Sep-28 03:20:16.549 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Sep-28 03:20:16.549 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sep-28 03:20:16.584 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Sep-28 03:20:16.584 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sep-28 03:20:16.587 [main] DEBUG nextflow.processor.TaskProcessor - Creating *combiner* operator for each param(s) at index(es): [2]
+Sep-28 03:20:16.642 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Sep-28 03:20:16.642 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Sep-28 03:20:16.645 [main] DEBUG nextflow.processor.TaskProcessor - Creating *combiner* operator for each param(s) at index(es): [2]
+Sep-28 03:20:16.653 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: Evaluation_STEP:PROCESS_SplitTasks, PROCESS_FilterOverlappingHumanProteome, PROCESS_PrepareFinalFiles, PROCESS_Prediction, setEnvironment, PROCESS_FeatureSelectionGeneralModel, PROCESS_ParsePredictionResults, PROCESS_SplitTasks, PROCESS_FilterOverlappingViolinet, Evaluation_STEP:PROCESS_EvaluationPipelineRanking, PROCESS_EvaluationPipelineRanking, PROCESS_SplitPreProcessTasks, PROCESS_FilterOverlappingIedbEpitope, Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel, PROCESS_FilterRank, PROCESS_TransformDatasets, PROCESS_FilterAllelePromiscuity, PROCESS_Comparison
+Sep-28 03:20:16.654 [main] DEBUG nextflow.Session - Igniting dataflow network (6)
+Sep-28 03:20:16.654 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > setEnvironment
+Sep-28 03:20:16.655 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > Evaluation_STEP:PROCESS_SplitTasks
+Sep-28 03:20:16.655 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel
+Sep-28 03:20:16.655 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel
+Sep-28 03:20:16.656 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > Evaluation_STEP:PROCESS_EvaluationPipelineRanking
+Sep-28 03:20:16.660 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > Evaluation_STEP:PROCESS_EvaluationPipelineRanking
+Sep-28 03:20:16.661 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_b4d3b2ec4015e049: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/./modules/prediction/main.nf
+  Script_358297ab33fc2070: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/./modules/data_preprocessing/main.nf
+  Script_e69f55fa9c03d755: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/main.nf
+  Script_85452f09746e8ea8: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/./modules/feature_extraction_methods/main.nf
+  Script_9d167622febcc9f0: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/./modules/evaluation/main.nf
+Sep-28 03:20:16.661 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Sep-28 03:20:16.661 [main] DEBUG nextflow.Session - Session await
+Sep-28 03:20:16.884 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 03:20:16.888 [Task submitter] INFO  nextflow.Session - [e0/80fc06] Submitted process > Evaluation_STEP:PROCESS_SplitTasks
+Sep-28 03:20:36.967 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: Evaluation_STEP:PROCESS_SplitTasks; status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/e0/80fc0645a8eafe4a5c83b90f63198d]
+Sep-28 03:20:36.969 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Sep-28 03:20:36.977 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 03:20:36.978 [Task submitter] INFO  nextflow.Session - [12/4f8cd3] Submitted process > setEnvironment
+Sep-28 03:20:36.997 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: setEnvironment; status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/12/4f8cd3b9d2dc4c87b7c3f1d4e304bb]
+Sep-28 03:20:37.248 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 03:20:37.248 [Task submitter] INFO  nextflow.Session - [af/7d90ec] Submitted process > Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (5)
+Sep-28 03:20:42.496 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (5); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/af/7d90ece3d9619877390992b524c884]
+Sep-28 03:20:42.503 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 03:20:42.504 [Task submitter] INFO  nextflow.Session - [15/d63762] Submitted process > Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (3)
+Sep-28 03:20:47.989 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (3); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/15/d6376246f04d45d7b6061b382f5674]
+Sep-28 03:20:47.996 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 03:20:47.996 [Task submitter] INFO  nextflow.Session - [bf/b13356] Submitted process > Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (4)
+Sep-28 03:20:57.313 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (4); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/bf/b1335659a3b08963434f4191f0495b]
+Sep-28 03:20:57.334 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 03:20:57.335 [Task submitter] INFO  nextflow.Session - [a5/b85192] Submitted process > Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (7)
+Sep-28 03:21:12.994 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (7); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/a5/b8519280210b86dc3060305006bc4c]
+Sep-28 03:21:13.027 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 03:21:13.028 [Task submitter] INFO  nextflow.Session - [a8/8f7188] Submitted process > Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (8)
+Sep-28 03:21:21.210 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (8); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/a8/8f71889199bbceebbbd8d9b776fa19]
+Sep-28 03:21:21.218 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 03:21:21.219 [Task submitter] INFO  nextflow.Session - [f2/d0ebfe] Submitted process > Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (2)
+Sep-28 03:21:26.689 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (2); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/f2/d0ebfe885b63e7895abfb1fcbe1086]
+Sep-28 03:21:26.697 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 03:21:26.698 [Task submitter] INFO  nextflow.Session - [a3/579db9] Submitted process > Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (6)
+Sep-28 03:21:32.369 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (6); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/a3/579db92480f0b87e43fc72ef68cbc7]
+Sep-28 03:21:32.376 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 03:21:32.376 [Task submitter] INFO  nextflow.Session - [52/a9d78d] Submitted process > Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (1)
+Sep-28 03:21:42.101 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (1); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/52/a9d78df38d86ae910f4e3bf8c76982]
+Sep-28 03:21:42.107 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 03:21:42.107 [Task submitter] INFO  nextflow.Session - [a6/dc9a1b] Submitted process > Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (9)
+Sep-28 03:21:49.321 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 11; name: Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (9); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/a6/dc9a1b7f6a686afa0f8711f5c07c0a]
+Sep-28 03:21:49.328 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 03:21:49.329 [Task submitter] INFO  nextflow.Session - [25/7c3493] Submitted process > Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (16)
+Sep-28 03:21:56.750 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 18; name: Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (16); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/25/7c34931de3e5425d0177bbcba83243]
+Sep-28 03:21:56.770 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 03:21:56.770 [Task submitter] INFO  nextflow.Session - [5f/1a4fc5] Submitted process > Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (14)
+Sep-28 03:22:09.265 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 16; name: Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (14); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/5f/1a4fc57da03a7c475c95555b5a7c8f]
+Sep-28 03:22:09.296 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 03:22:09.296 [Task submitter] INFO  nextflow.Session - [68/a853b8] Submitted process > Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (10)
+Sep-28 03:22:24.578 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 12; name: Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (10); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/68/a853b86058ea1541ec6af37f45ab2b]
+Sep-28 03:22:24.603 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 03:22:24.604 [Task submitter] INFO  nextflow.Session - [f9/10ca98] Submitted process > Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (11)
+Sep-28 03:22:34.361 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 13; name: Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (11); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/f9/10ca98624ead594deaba2a95c51cd1]
+Sep-28 03:22:34.368 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 03:22:34.368 [Task submitter] INFO  nextflow.Session - [d0/cbbac3] Submitted process > Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (12)
+Sep-28 03:22:40.417 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 14; name: Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (12); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/d0/cbbac3d65c324ddc6bd1fe58ec743b]
+Sep-28 03:22:40.426 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 03:22:40.426 [Task submitter] INFO  nextflow.Session - [77/b5ebbb] Submitted process > Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (13)
+Sep-28 03:22:46.080 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 15; name: Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (13); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/77/b5ebbb2eb16c3cc2e2debc4d08feea]
+Sep-28 03:22:46.089 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 03:22:46.090 [Task submitter] INFO  nextflow.Session - [0c/a46926] Submitted process > Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (15)
+Sep-28 03:22:51.347 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 17; name: Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (15); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/0c/a469262a3e0f667ae88ddab57d9682]
+Sep-28 03:22:51.353 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 03:22:51.354 [Task submitter] INFO  nextflow.Session - [0e/a85ba6] Submitted process > Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (17)
+Sep-28 03:23:01.022 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 19; name: Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (17); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/0e/a85ba693e610aaa6cb470d23b8fa7d]
+Sep-28 03:23:01.047 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 03:23:01.047 [Task submitter] INFO  nextflow.Session - [10/aa55b2] Submitted process > Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (19)
+Sep-28 03:23:17.232 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 21; name: Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (19); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/10/aa55b2d5d83010cdb40679e7096bc8]
+Sep-28 03:23:17.260 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 03:23:17.260 [Task submitter] INFO  nextflow.Session - [06/a0b751] Submitted process > Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (22)
+Sep-28 03:23:27.326 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 24; name: Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (22); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/06/a0b75177bc914afad5b89d5c2b83f6]
+Sep-28 03:23:27.332 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 03:23:27.332 [Task submitter] INFO  nextflow.Session - [9e/dcab21] Submitted process > Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (21)
+Sep-28 03:23:32.938 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 23; name: Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (21); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/9e/dcab21a819a497c82902f30ae1ed2a]
+Sep-28 03:23:32.947 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 03:23:32.947 [Task submitter] INFO  nextflow.Session - [d0/c8592a] Submitted process > Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (18)
+Sep-28 03:23:38.692 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 20; name: Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (18); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/d0/c8592a8a1604eee8cf1850a3378167]
+Sep-28 03:23:38.699 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 03:23:38.700 [Task submitter] INFO  nextflow.Session - [3c/1bf04c] Submitted process > Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (24)
+Sep-28 03:23:44.461 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 26; name: Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (24); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/3c/1bf04c4f1760339ed6f48c14e0f190]
+Sep-28 03:23:44.468 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 03:23:44.468 [Task submitter] INFO  nextflow.Session - [d5/b03522] Submitted process > Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (23)
+Sep-28 03:23:51.704 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 25; name: Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (23); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/d5/b035228e3c64aa43c8a734c0e28d95]
+Sep-28 03:23:51.712 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 03:23:51.712 [Task submitter] INFO  nextflow.Session - [4d/cb242b] Submitted process > Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (20)
+Sep-28 03:24:00.642 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 22; name: Evaluation_STEP:PROCESS_FeatureSelectionGeneralModel (20); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/4d/cb242b214808ff83c5b9f14a043dbe]
+Sep-28 03:24:00.679 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 03:24:00.679 [Task submitter] INFO  nextflow.Session - [4e/448203] Submitted process > Evaluation_STEP:PROCESS_EvaluationPipelineRanking (8)
+Sep-28 03:25:16.499 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 34; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (8); status: RUNNING; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/4e/448203b17f166362e4639216bc8dc9]
+Sep-28 03:25:17.750 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 23 -- tasks to be submitted are shown below
+~> TaskHandler[id: 29; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (3); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/d6/74702f48ef05aa683ef07442c7516e]
+~> TaskHandler[id: 27; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (1); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/72/ac13f359d79e7ebb785471c2d481ee]
+~> TaskHandler[id: 32; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (6); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/9c/e9faeb348ec41fde7d127eb64bb1c6]
+~> TaskHandler[id: 31; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (5); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/8c/e20a0829cc5d63c0633b710a8284a4]
+~> TaskHandler[id: 30; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (4); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/81/c4d71bf7f436fe6acfac031d36dc57]
+~> TaskHandler[id: 33; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (7); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/2c/165902a4d676dbf38d080b7c9466a1]
+~> TaskHandler[id: 36; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (10); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/a8/e9c5be05b6d98c18b9d67aa7127880]
+~> TaskHandler[id: 28; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (2); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/98/0b14d1f285ffd342dfca74d59cc212]
+~> TaskHandler[id: 39; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (13); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/ef/9fc84ab3a0c9f011b55ca12e6f7090]
+~> TaskHandler[id: 35; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (9); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/d1/11a2922fb2e7ee52178e9b1996d6e4]
+.. remaining tasks omitted.
+Sep-28 03:27:37.778 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 34; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (8); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/4e/448203b17f166362e4639216bc8dc9]
+Sep-28 03:27:37.801 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 03:27:37.801 [Task submitter] INFO  nextflow.Session - [d6/74702f] Submitted process > Evaluation_STEP:PROCESS_EvaluationPipelineRanking (3)
+Sep-28 03:28:33.141 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 29; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (3); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/d6/74702f48ef05aa683ef07442c7516e]
+Sep-28 03:28:33.148 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 03:28:33.148 [Task submitter] INFO  nextflow.Session - [72/ac13f3] Submitted process > Evaluation_STEP:PROCESS_EvaluationPipelineRanking (1)
+Sep-28 03:30:16.517 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 27; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (1); status: RUNNING; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/72/ac13f359d79e7ebb785471c2d481ee]
+Sep-28 03:30:18.188 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 21 -- tasks to be submitted are shown below
+~> TaskHandler[id: 32; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (6); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/9c/e9faeb348ec41fde7d127eb64bb1c6]
+~> TaskHandler[id: 31; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (5); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/8c/e20a0829cc5d63c0633b710a8284a4]
+~> TaskHandler[id: 30; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (4); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/81/c4d71bf7f436fe6acfac031d36dc57]
+~> TaskHandler[id: 33; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (7); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/2c/165902a4d676dbf38d080b7c9466a1]
+~> TaskHandler[id: 36; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (10); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/a8/e9c5be05b6d98c18b9d67aa7127880]
+~> TaskHandler[id: 28; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (2); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/98/0b14d1f285ffd342dfca74d59cc212]
+~> TaskHandler[id: 39; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (13); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/ef/9fc84ab3a0c9f011b55ca12e6f7090]
+~> TaskHandler[id: 35; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (9); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/d1/11a2922fb2e7ee52178e9b1996d6e4]
+~> TaskHandler[id: 38; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (12); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/34/92f906a4b718fbb3a340dedbcf791d]
+~> TaskHandler[id: 40; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (14); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/25/5a459c2dc9514e4bf6b2d9b4849093]
+.. remaining tasks omitted.
+Sep-28 03:35:16.551 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 27; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (1); status: RUNNING; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/72/ac13f359d79e7ebb785471c2d481ee]
+Sep-28 03:35:18.280 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 21 -- tasks to be submitted are shown below
+~> TaskHandler[id: 32; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (6); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/9c/e9faeb348ec41fde7d127eb64bb1c6]
+~> TaskHandler[id: 31; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (5); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/8c/e20a0829cc5d63c0633b710a8284a4]
+~> TaskHandler[id: 30; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (4); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/81/c4d71bf7f436fe6acfac031d36dc57]
+~> TaskHandler[id: 33; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (7); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/2c/165902a4d676dbf38d080b7c9466a1]
+~> TaskHandler[id: 36; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (10); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/a8/e9c5be05b6d98c18b9d67aa7127880]
+~> TaskHandler[id: 28; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (2); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/98/0b14d1f285ffd342dfca74d59cc212]
+~> TaskHandler[id: 39; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (13); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/ef/9fc84ab3a0c9f011b55ca12e6f7090]
+~> TaskHandler[id: 35; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (9); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/d1/11a2922fb2e7ee52178e9b1996d6e4]
+~> TaskHandler[id: 38; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (12); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/34/92f906a4b718fbb3a340dedbcf791d]
+~> TaskHandler[id: 40; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (14); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/25/5a459c2dc9514e4bf6b2d9b4849093]
+.. remaining tasks omitted.
+Sep-28 03:36:18.041 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 27; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (1); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/72/ac13f359d79e7ebb785471c2d481ee]
+Sep-28 03:36:18.049 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 03:36:18.049 [Task submitter] INFO  nextflow.Session - [9c/e9faeb] Submitted process > Evaluation_STEP:PROCESS_EvaluationPipelineRanking (6)
+Sep-28 03:40:16.613 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 32; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (6); status: RUNNING; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/9c/e9faeb348ec41fde7d127eb64bb1c6]
+Sep-28 03:40:19.084 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 20 -- tasks to be submitted are shown below
+~> TaskHandler[id: 31; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (5); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/8c/e20a0829cc5d63c0633b710a8284a4]
+~> TaskHandler[id: 30; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (4); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/81/c4d71bf7f436fe6acfac031d36dc57]
+~> TaskHandler[id: 33; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (7); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/2c/165902a4d676dbf38d080b7c9466a1]
+~> TaskHandler[id: 36; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (10); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/a8/e9c5be05b6d98c18b9d67aa7127880]
+~> TaskHandler[id: 28; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (2); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/98/0b14d1f285ffd342dfca74d59cc212]
+~> TaskHandler[id: 39; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (13); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/ef/9fc84ab3a0c9f011b55ca12e6f7090]
+~> TaskHandler[id: 35; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (9); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/d1/11a2922fb2e7ee52178e9b1996d6e4]
+~> TaskHandler[id: 38; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (12); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/34/92f906a4b718fbb3a340dedbcf791d]
+~> TaskHandler[id: 40; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (14); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/25/5a459c2dc9514e4bf6b2d9b4849093]
+~> TaskHandler[id: 45; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (19); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/b4/b66b91514293bc0dd08e37b07f6350]
+.. remaining tasks omitted.
+Sep-28 03:45:16.633 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 32; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (6); status: RUNNING; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/9c/e9faeb348ec41fde7d127eb64bb1c6]
+Sep-28 03:45:19.145 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 20 -- tasks to be submitted are shown below
+~> TaskHandler[id: 31; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (5); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/8c/e20a0829cc5d63c0633b710a8284a4]
+~> TaskHandler[id: 30; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (4); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/81/c4d71bf7f436fe6acfac031d36dc57]
+~> TaskHandler[id: 33; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (7); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/2c/165902a4d676dbf38d080b7c9466a1]
+~> TaskHandler[id: 36; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (10); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/a8/e9c5be05b6d98c18b9d67aa7127880]
+~> TaskHandler[id: 28; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (2); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/98/0b14d1f285ffd342dfca74d59cc212]
+~> TaskHandler[id: 39; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (13); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/ef/9fc84ab3a0c9f011b55ca12e6f7090]
+~> TaskHandler[id: 35; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (9); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/d1/11a2922fb2e7ee52178e9b1996d6e4]
+~> TaskHandler[id: 38; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (12); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/34/92f906a4b718fbb3a340dedbcf791d]
+~> TaskHandler[id: 40; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (14); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/25/5a459c2dc9514e4bf6b2d9b4849093]
+~> TaskHandler[id: 45; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (19); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/b4/b66b91514293bc0dd08e37b07f6350]
+.. remaining tasks omitted.
+Sep-28 03:50:16.652 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 32; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (6); status: RUNNING; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/9c/e9faeb348ec41fde7d127eb64bb1c6]
+Sep-28 03:50:19.192 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 20 -- tasks to be submitted are shown below
+~> TaskHandler[id: 31; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (5); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/8c/e20a0829cc5d63c0633b710a8284a4]
+~> TaskHandler[id: 30; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (4); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/81/c4d71bf7f436fe6acfac031d36dc57]
+~> TaskHandler[id: 33; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (7); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/2c/165902a4d676dbf38d080b7c9466a1]
+~> TaskHandler[id: 36; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (10); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/a8/e9c5be05b6d98c18b9d67aa7127880]
+~> TaskHandler[id: 28; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (2); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/98/0b14d1f285ffd342dfca74d59cc212]
+~> TaskHandler[id: 39; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (13); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/ef/9fc84ab3a0c9f011b55ca12e6f7090]
+~> TaskHandler[id: 35; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (9); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/d1/11a2922fb2e7ee52178e9b1996d6e4]
+~> TaskHandler[id: 38; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (12); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/34/92f906a4b718fbb3a340dedbcf791d]
+~> TaskHandler[id: 40; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (14); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/25/5a459c2dc9514e4bf6b2d9b4849093]
+~> TaskHandler[id: 45; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (19); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/b4/b66b91514293bc0dd08e37b07f6350]
+.. remaining tasks omitted.
+Sep-28 03:53:44.031 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 32; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (6); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/9c/e9faeb348ec41fde7d127eb64bb1c6]
+Sep-28 03:53:44.041 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 03:53:44.041 [Task submitter] INFO  nextflow.Session - [8c/e20a08] Submitted process > Evaluation_STEP:PROCESS_EvaluationPipelineRanking (5)
+Sep-28 03:55:16.655 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 31; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (5); status: RUNNING; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/8c/e20a0829cc5d63c0633b710a8284a4]
+Sep-28 03:55:20.058 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 19 -- tasks to be submitted are shown below
+~> TaskHandler[id: 30; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (4); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/81/c4d71bf7f436fe6acfac031d36dc57]
+~> TaskHandler[id: 33; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (7); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/2c/165902a4d676dbf38d080b7c9466a1]
+~> TaskHandler[id: 36; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (10); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/a8/e9c5be05b6d98c18b9d67aa7127880]
+~> TaskHandler[id: 28; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (2); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/98/0b14d1f285ffd342dfca74d59cc212]
+~> TaskHandler[id: 39; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (13); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/ef/9fc84ab3a0c9f011b55ca12e6f7090]
+~> TaskHandler[id: 35; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (9); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/d1/11a2922fb2e7ee52178e9b1996d6e4]
+~> TaskHandler[id: 38; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (12); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/34/92f906a4b718fbb3a340dedbcf791d]
+~> TaskHandler[id: 40; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (14); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/25/5a459c2dc9514e4bf6b2d9b4849093]
+~> TaskHandler[id: 45; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (19); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/b4/b66b91514293bc0dd08e37b07f6350]
+~> TaskHandler[id: 37; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (11); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/89/dd71e67fb1f035ceccc6111b8e504a]
+.. remaining tasks omitted.
+Sep-28 03:58:39.493 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 31; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (5); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/8c/e20a0829cc5d63c0633b710a8284a4]
+Sep-28 03:58:39.536 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 03:58:39.537 [Task submitter] INFO  nextflow.Session - [81/c4d71b] Submitted process > Evaluation_STEP:PROCESS_EvaluationPipelineRanking (4)
+Sep-28 04:00:16.730 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 30; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (4); status: RUNNING; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/81/c4d71bf7f436fe6acfac031d36dc57]
+Sep-28 04:00:20.554 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 18 -- tasks to be submitted are shown below
+~> TaskHandler[id: 33; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (7); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/2c/165902a4d676dbf38d080b7c9466a1]
+~> TaskHandler[id: 36; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (10); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/a8/e9c5be05b6d98c18b9d67aa7127880]
+~> TaskHandler[id: 28; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (2); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/98/0b14d1f285ffd342dfca74d59cc212]
+~> TaskHandler[id: 39; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (13); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/ef/9fc84ab3a0c9f011b55ca12e6f7090]
+~> TaskHandler[id: 35; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (9); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/d1/11a2922fb2e7ee52178e9b1996d6e4]
+~> TaskHandler[id: 38; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (12); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/34/92f906a4b718fbb3a340dedbcf791d]
+~> TaskHandler[id: 40; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (14); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/25/5a459c2dc9514e4bf6b2d9b4849093]
+~> TaskHandler[id: 45; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (19); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/b4/b66b91514293bc0dd08e37b07f6350]
+~> TaskHandler[id: 37; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (11); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/89/dd71e67fb1f035ceccc6111b8e504a]
+~> TaskHandler[id: 42; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (16); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/92/86de61d2bf82eee2c2aa74c86f3861]
+.. remaining tasks omitted.
+Sep-28 04:04:25.971 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 30; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (4); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/81/c4d71bf7f436fe6acfac031d36dc57]
+Sep-28 04:04:25.992 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 04:04:25.993 [Task submitter] INFO  nextflow.Session - [2c/165902] Submitted process > Evaluation_STEP:PROCESS_EvaluationPipelineRanking (7)
+Sep-28 04:05:16.747 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 33; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (7); status: RUNNING; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/2c/165902a4d676dbf38d080b7c9466a1]
+Sep-28 04:05:21.008 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 17 -- tasks to be submitted are shown below
+~> TaskHandler[id: 36; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (10); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/a8/e9c5be05b6d98c18b9d67aa7127880]
+~> TaskHandler[id: 28; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (2); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/98/0b14d1f285ffd342dfca74d59cc212]
+~> TaskHandler[id: 39; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (13); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/ef/9fc84ab3a0c9f011b55ca12e6f7090]
+~> TaskHandler[id: 35; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (9); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/d1/11a2922fb2e7ee52178e9b1996d6e4]
+~> TaskHandler[id: 38; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (12); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/34/92f906a4b718fbb3a340dedbcf791d]
+~> TaskHandler[id: 40; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (14); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/25/5a459c2dc9514e4bf6b2d9b4849093]
+~> TaskHandler[id: 45; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (19); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/b4/b66b91514293bc0dd08e37b07f6350]
+~> TaskHandler[id: 37; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (11); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/89/dd71e67fb1f035ceccc6111b8e504a]
+~> TaskHandler[id: 42; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (16); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/92/86de61d2bf82eee2c2aa74c86f3861]
+~> TaskHandler[id: 41; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (15); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/36/6eae654334b6e275d93961bf90dbd5]
+.. remaining tasks omitted.
+Sep-28 04:06:13.477 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 33; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (7); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/2c/165902a4d676dbf38d080b7c9466a1]
+Sep-28 04:06:13.485 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 04:06:13.485 [Task submitter] INFO  nextflow.Session - [a8/e9c5be] Submitted process > Evaluation_STEP:PROCESS_EvaluationPipelineRanking (10)
+Sep-28 04:10:16.843 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 36; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (10); status: RUNNING; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/a8/e9c5be05b6d98c18b9d67aa7127880]
+Sep-28 04:10:21.564 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 16 -- tasks to be submitted are shown below
+~> TaskHandler[id: 28; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (2); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/98/0b14d1f285ffd342dfca74d59cc212]
+~> TaskHandler[id: 39; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (13); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/ef/9fc84ab3a0c9f011b55ca12e6f7090]
+~> TaskHandler[id: 35; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (9); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/d1/11a2922fb2e7ee52178e9b1996d6e4]
+~> TaskHandler[id: 38; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (12); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/34/92f906a4b718fbb3a340dedbcf791d]
+~> TaskHandler[id: 40; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (14); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/25/5a459c2dc9514e4bf6b2d9b4849093]
+~> TaskHandler[id: 45; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (19); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/b4/b66b91514293bc0dd08e37b07f6350]
+~> TaskHandler[id: 37; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (11); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/89/dd71e67fb1f035ceccc6111b8e504a]
+~> TaskHandler[id: 42; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (16); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/92/86de61d2bf82eee2c2aa74c86f3861]
+~> TaskHandler[id: 41; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (15); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/36/6eae654334b6e275d93961bf90dbd5]
+~> TaskHandler[id: 46; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (20); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/e0/aa18e6115196a9c040f0652f75e34e]
+.. remaining tasks omitted.
+Sep-28 04:15:16.928 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 36; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (10); status: RUNNING; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/a8/e9c5be05b6d98c18b9d67aa7127880]
+Sep-28 04:15:21.609 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 16 -- tasks to be submitted are shown below
+~> TaskHandler[id: 28; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (2); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/98/0b14d1f285ffd342dfca74d59cc212]
+~> TaskHandler[id: 39; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (13); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/ef/9fc84ab3a0c9f011b55ca12e6f7090]
+~> TaskHandler[id: 35; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (9); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/d1/11a2922fb2e7ee52178e9b1996d6e4]
+~> TaskHandler[id: 38; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (12); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/34/92f906a4b718fbb3a340dedbcf791d]
+~> TaskHandler[id: 40; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (14); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/25/5a459c2dc9514e4bf6b2d9b4849093]
+~> TaskHandler[id: 45; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (19); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/b4/b66b91514293bc0dd08e37b07f6350]
+~> TaskHandler[id: 37; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (11); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/89/dd71e67fb1f035ceccc6111b8e504a]
+~> TaskHandler[id: 42; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (16); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/92/86de61d2bf82eee2c2aa74c86f3861]
+~> TaskHandler[id: 41; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (15); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/36/6eae654334b6e275d93961bf90dbd5]
+~> TaskHandler[id: 46; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (20); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/e0/aa18e6115196a9c040f0652f75e34e]
+.. remaining tasks omitted.
+Sep-28 04:17:25.430 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 36; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (10); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/a8/e9c5be05b6d98c18b9d67aa7127880]
+Sep-28 04:17:25.468 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 04:17:25.468 [Task submitter] INFO  nextflow.Session - [98/0b14d1] Submitted process > Evaluation_STEP:PROCESS_EvaluationPipelineRanking (2)
+Sep-28 04:18:54.589 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 28; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (2); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/98/0b14d1f285ffd342dfca74d59cc212]
+Sep-28 04:18:54.598 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 04:18:54.599 [Task submitter] INFO  nextflow.Session - [ef/9fc84a] Submitted process > Evaluation_STEP:PROCESS_EvaluationPipelineRanking (13)
+Sep-28 04:19:36.792 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 39; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (13); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/ef/9fc84ab3a0c9f011b55ca12e6f7090]
+Sep-28 04:19:36.828 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 04:19:36.829 [Task submitter] INFO  nextflow.Session - [d1/11a292] Submitted process > Evaluation_STEP:PROCESS_EvaluationPipelineRanking (9)
+Sep-28 04:20:16.939 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 35; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (9); status: RUNNING; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/d1/11a2922fb2e7ee52178e9b1996d6e4]
+Sep-28 04:20:21.837 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 13 -- tasks to be submitted are shown below
+~> TaskHandler[id: 38; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (12); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/34/92f906a4b718fbb3a340dedbcf791d]
+~> TaskHandler[id: 40; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (14); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/25/5a459c2dc9514e4bf6b2d9b4849093]
+~> TaskHandler[id: 45; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (19); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/b4/b66b91514293bc0dd08e37b07f6350]
+~> TaskHandler[id: 37; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (11); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/89/dd71e67fb1f035ceccc6111b8e504a]
+~> TaskHandler[id: 42; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (16); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/92/86de61d2bf82eee2c2aa74c86f3861]
+~> TaskHandler[id: 41; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (15); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/36/6eae654334b6e275d93961bf90dbd5]
+~> TaskHandler[id: 46; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (20); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/e0/aa18e6115196a9c040f0652f75e34e]
+~> TaskHandler[id: 43; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (17); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/cb/e907c3f4bc7dcac25d6e6d6cbd0048]
+~> TaskHandler[id: 44; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (18); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/64/f47421536a73b18bee1491e2012390]
+~> TaskHandler[id: 47; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (21); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/39/441633e16dc94696b4c4c35f1ec39c]
+.. remaining tasks omitted.
+Sep-28 04:21:39.813 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 35; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (9); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/d1/11a2922fb2e7ee52178e9b1996d6e4]
+Sep-28 04:21:39.859 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 04:21:39.860 [Task submitter] INFO  nextflow.Session - [34/92f906] Submitted process > Evaluation_STEP:PROCESS_EvaluationPipelineRanking (12)
+Sep-28 04:23:54.482 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 38; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (12); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/34/92f906a4b718fbb3a340dedbcf791d]
+Sep-28 04:23:54.516 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 04:23:54.517 [Task submitter] INFO  nextflow.Session - [25/5a459c] Submitted process > Evaluation_STEP:PROCESS_EvaluationPipelineRanking (14)
+Sep-28 04:25:16.995 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 40; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (14); status: RUNNING; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/25/5a459c2dc9514e4bf6b2d9b4849093]
+Sep-28 04:25:22.533 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 11 -- tasks to be submitted are shown below
+~> TaskHandler[id: 45; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (19); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/b4/b66b91514293bc0dd08e37b07f6350]
+~> TaskHandler[id: 37; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (11); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/89/dd71e67fb1f035ceccc6111b8e504a]
+~> TaskHandler[id: 42; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (16); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/92/86de61d2bf82eee2c2aa74c86f3861]
+~> TaskHandler[id: 41; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (15); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/36/6eae654334b6e275d93961bf90dbd5]
+~> TaskHandler[id: 46; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (20); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/e0/aa18e6115196a9c040f0652f75e34e]
+~> TaskHandler[id: 43; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (17); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/cb/e907c3f4bc7dcac25d6e6d6cbd0048]
+~> TaskHandler[id: 44; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (18); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/64/f47421536a73b18bee1491e2012390]
+~> TaskHandler[id: 47; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (21); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/39/441633e16dc94696b4c4c35f1ec39c]
+~> TaskHandler[id: 49; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (23); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/47/b5ea7081cb99e5ae3560fdf8928db5]
+~> TaskHandler[id: 48; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (22); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/1b/be0dd59e705092211e7c43f4dea74e]
+Sep-28 04:26:55.849 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 40; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (14); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/25/5a459c2dc9514e4bf6b2d9b4849093]
+Sep-28 04:26:55.883 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 04:26:55.883 [Task submitter] INFO  nextflow.Session - [b4/b66b91] Submitted process > Evaluation_STEP:PROCESS_EvaluationPipelineRanking (19)
+Sep-28 04:29:16.455 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 45; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (19); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/b4/b66b91514293bc0dd08e37b07f6350]
+Sep-28 04:29:16.471 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 04:29:16.471 [Task submitter] INFO  nextflow.Session - [89/dd71e6] Submitted process > Evaluation_STEP:PROCESS_EvaluationPipelineRanking (11)
+Sep-28 04:30:17.032 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 37; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (11); status: RUNNING; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/89/dd71e67fb1f035ceccc6111b8e504a]
+Sep-28 04:30:23.483 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 9 -- tasks to be submitted are shown below
+~> TaskHandler[id: 42; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (16); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/92/86de61d2bf82eee2c2aa74c86f3861]
+~> TaskHandler[id: 41; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (15); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/36/6eae654334b6e275d93961bf90dbd5]
+~> TaskHandler[id: 46; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (20); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/e0/aa18e6115196a9c040f0652f75e34e]
+~> TaskHandler[id: 43; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (17); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/cb/e907c3f4bc7dcac25d6e6d6cbd0048]
+~> TaskHandler[id: 44; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (18); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/64/f47421536a73b18bee1491e2012390]
+~> TaskHandler[id: 47; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (21); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/39/441633e16dc94696b4c4c35f1ec39c]
+~> TaskHandler[id: 49; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (23); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/47/b5ea7081cb99e5ae3560fdf8928db5]
+~> TaskHandler[id: 48; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (22); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/1b/be0dd59e705092211e7c43f4dea74e]
+~> TaskHandler[id: 50; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (24); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/80/68f0e5539bdea51f0e0b4a391687cc]
+Sep-28 04:32:30.744 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 37; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (11); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/89/dd71e67fb1f035ceccc6111b8e504a]
+Sep-28 04:32:30.765 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 04:32:30.765 [Task submitter] INFO  nextflow.Session - [92/86de61] Submitted process > Evaluation_STEP:PROCESS_EvaluationPipelineRanking (16)
+Sep-28 04:33:36.306 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 42; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (16); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/92/86de61d2bf82eee2c2aa74c86f3861]
+Sep-28 04:33:36.324 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 04:33:36.324 [Task submitter] INFO  nextflow.Session - [36/6eae65] Submitted process > Evaluation_STEP:PROCESS_EvaluationPipelineRanking (15)
+Sep-28 04:34:09.300 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 41; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (15); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/36/6eae654334b6e275d93961bf90dbd5]
+Sep-28 04:34:09.318 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 04:34:09.319 [Task submitter] INFO  nextflow.Session - [e0/aa18e6] Submitted process > Evaluation_STEP:PROCESS_EvaluationPipelineRanking (20)
+Sep-28 04:35:17.091 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 46; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (20); status: RUNNING; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/e0/aa18e6115196a9c040f0652f75e34e]
+Sep-28 04:35:24.333 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 6 -- tasks to be submitted are shown below
+~> TaskHandler[id: 43; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (17); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/cb/e907c3f4bc7dcac25d6e6d6cbd0048]
+~> TaskHandler[id: 44; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (18); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/64/f47421536a73b18bee1491e2012390]
+~> TaskHandler[id: 47; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (21); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/39/441633e16dc94696b4c4c35f1ec39c]
+~> TaskHandler[id: 49; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (23); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/47/b5ea7081cb99e5ae3560fdf8928db5]
+~> TaskHandler[id: 48; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (22); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/1b/be0dd59e705092211e7c43f4dea74e]
+~> TaskHandler[id: 50; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (24); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/80/68f0e5539bdea51f0e0b4a391687cc]
+Sep-28 04:36:10.515 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 46; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (20); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/e0/aa18e6115196a9c040f0652f75e34e]
+Sep-28 04:36:10.535 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 04:36:10.535 [Task submitter] INFO  nextflow.Session - [cb/e907c3] Submitted process > Evaluation_STEP:PROCESS_EvaluationPipelineRanking (17)
+Sep-28 04:40:17.100 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 43; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (17); status: RUNNING; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/cb/e907c3f4bc7dcac25d6e6d6cbd0048]
+Sep-28 04:40:24.595 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 5 -- tasks to be submitted are shown below
+~> TaskHandler[id: 44; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (18); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/64/f47421536a73b18bee1491e2012390]
+~> TaskHandler[id: 47; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (21); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/39/441633e16dc94696b4c4c35f1ec39c]
+~> TaskHandler[id: 49; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (23); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/47/b5ea7081cb99e5ae3560fdf8928db5]
+~> TaskHandler[id: 48; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (22); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/1b/be0dd59e705092211e7c43f4dea74e]
+~> TaskHandler[id: 50; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (24); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/80/68f0e5539bdea51f0e0b4a391687cc]
+Sep-28 04:41:19.929 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 43; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (17); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/cb/e907c3f4bc7dcac25d6e6d6cbd0048]
+Sep-28 04:41:19.952 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 04:41:19.952 [Task submitter] INFO  nextflow.Session - [64/f47421] Submitted process > Evaluation_STEP:PROCESS_EvaluationPipelineRanking (18)
+Sep-28 04:45:17.166 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 44; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (18); status: RUNNING; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/64/f47421536a73b18bee1491e2012390]
+Sep-28 04:45:17.402 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 44; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (18); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/64/f47421536a73b18bee1491e2012390]
+Sep-28 04:45:17.417 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 04:45:17.418 [Task submitter] INFO  nextflow.Session - [39/441633] Submitted process > Evaluation_STEP:PROCESS_EvaluationPipelineRanking (21)
+Sep-28 04:45:25.420 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 3 -- tasks to be submitted are shown below
+~> TaskHandler[id: 49; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (23); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/47/b5ea7081cb99e5ae3560fdf8928db5]
+~> TaskHandler[id: 48; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (22); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/1b/be0dd59e705092211e7c43f4dea74e]
+~> TaskHandler[id: 50; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (24); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/80/68f0e5539bdea51f0e0b4a391687cc]
+Sep-28 04:50:17.244 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 47; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (21); status: RUNNING; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/39/441633e16dc94696b4c4c35f1ec39c]
+Sep-28 04:50:25.476 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 3 -- tasks to be submitted are shown below
+~> TaskHandler[id: 49; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (23); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/47/b5ea7081cb99e5ae3560fdf8928db5]
+~> TaskHandler[id: 48; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (22); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/1b/be0dd59e705092211e7c43f4dea74e]
+~> TaskHandler[id: 50; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (24); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/80/68f0e5539bdea51f0e0b4a391687cc]
+Sep-28 04:53:42.240 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 47; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (21); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/39/441633e16dc94696b4c4c35f1ec39c]
+Sep-28 04:53:42.260 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 04:53:42.260 [Task submitter] INFO  nextflow.Session - [47/b5ea70] Submitted process > Evaluation_STEP:PROCESS_EvaluationPipelineRanking (23)
+Sep-28 04:54:23.806 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 49; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (23); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/47/b5ea7081cb99e5ae3560fdf8928db5]
+Sep-28 04:54:23.823 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 04:54:23.823 [Task submitter] INFO  nextflow.Session - [1b/be0dd5] Submitted process > Evaluation_STEP:PROCESS_EvaluationPipelineRanking (22)
+Sep-28 04:55:17.261 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 48; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (22); status: RUNNING; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/1b/be0dd59e705092211e7c43f4dea74e]
+Sep-28 04:55:25.831 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 1 -- tasks to be submitted are shown below
+~> TaskHandler[id: 50; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (24); status: NEW; exit: -; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/80/68f0e5539bdea51f0e0b4a391687cc]
+Sep-28 04:56:22.790 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 48; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (22); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/1b/be0dd59e705092211e7c43f4dea74e]
+Sep-28 04:56:22.826 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Sep-28 04:56:22.827 [Task submitter] INFO  nextflow.Session - [80/68f0e5] Submitted process > Evaluation_STEP:PROCESS_EvaluationPipelineRanking (24)
+Sep-28 04:57:47.311 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 50; name: Evaluation_STEP:PROCESS_EvaluationPipelineRanking (24); status: COMPLETED; exit: 0; error: -; workDir: /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/work/80/68f0e5539bdea51f0e0b4a391687cc]
+Sep-28 04:57:47.315 [main] DEBUG nextflow.Session - Session await > all processes finished
+Sep-28 04:57:47.414 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Sep-28 04:57:47.415 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Sep-28 04:57:47.423 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
+Sep-28 04:57:47.429 [main] INFO  nextflow.Nextflow - 
+Done! Models were trained and evaluated!
+
+Sep-28 04:57:47.433 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=50; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=8h 7m 6s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=2; peakCpus=10; peakMemory=0; ]
+Sep-28 04:57:47.507 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Sep-28 04:57:47.583 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Sep-28 04:57:47.584 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

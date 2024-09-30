@@ -1,0 +1,63 @@
+2024-09-23 12:48:37	1.7s	grave_pike	ERR	d7246d36f99047f25227e0134efdc2e3	891956bd-69b9-46b8-a75c-b0a483d4877c	nextflow run main.nf
+2024-09-23 13:24:36	2.1s	pensive_bassi	ERR	d7246d36f99047f25227e0134efdc2e3	8eba9071-04fc-4df2-ae63-c9fb7b9d0a91	nextflow run main.nf
+2024-09-23 13:25:13	38.8s	pensive_cajal	ERR	3ecce6222ef5945c711c59431baa3f63	802bc643-c774-41ed-94a5-c071b3adff42	nextflow run main.nf
+2024-09-23 14:16:29	1m 4s	festering_leakey	ERR	3ecce6222ef5945c711c59431baa3f63	e948b1f6-96b7-4299-a0ae-d736df09e97b	nextflow run main.nf
+2024-09-23 14:26:27	9.8s	loving_ritchie	ERR	3ecce6222ef5945c711c59431baa3f63	56104506-e1eb-46c5-94b2-2c0de2fae8c8	nextflow run main.nf
+2024-09-23 14:27:56	16.7s	adoring_murdock	ERR	3ecce6222ef5945c711c59431baa3f63	a5d79f5c-e3bc-4602-97b7-1b9c83e722da	nextflow run main.nf
+2024-09-23 14:41:13	11.2s	voluminous_borg	ERR	3ecce6222ef5945c711c59431baa3f63	0aa52e29-0195-46a6-a168-c2b44d29e2b9	nextflow run main.nf
+2024-09-23 14:50:54	11m 50s	distraught_curran	ERR	3ecce6222ef5945c711c59431baa3f63	c20e7c11-dbae-415b-9add-06b956a42462	nextflow run main.nf
+2024-09-23 15:13:05	35m 19s	gigantic_brahmagupta	ERR	3ecce6222ef5945c711c59431baa3f63	0b420796-2612-4ec0-8692-f38c45a0103f	nextflow run main.nf
+2024-09-23 15:51:21	34m 19s	evil_albattani	ERR	3ecce6222ef5945c711c59431baa3f63	26310cc0-c007-4347-a648-19ececeebc3d	nextflow run main.nf
+2024-09-23 17:29:53	28.8s	loving_williams	ERR	3ecce6222ef5945c711c59431baa3f63	85c7b047-01d7-4670-8fc3-d3bfcb9bf52e	nextflow run main.nf
+2024-09-23 17:34:01	1h 23m 20s	suspicious_bardeen	OK	3ecce6222ef5945c711c59431baa3f63	56d91a9f-3de3-4aca-b3d3-ab71dd1a6917	nextflow run main.nf
+2024-09-26 08:12:42	3.6s	distraught_hoover	OK	4cce8e803d08e1ec788eefb68ef102d2	3d993c62-dd46-487f-924f-a347e73820b3	nextflow run main.nf
+2024-09-26 08:13:11	15m 14s	pedantic_minsky	ERR	86d28ae7f7ab15324c979f724648394d	d988d0af-8b3d-40f4-a72b-fdd748b0964e	nextflow run main.nf
+2024-09-26 09:38:17	16m 2s	infallible_majorana	ERR	86d28ae7f7ab15324c979f724648394d	cc979882-8f61-484f-9dd4-cad79bf792d4	nextflow run main.nf
+2024-09-26 09:55:14	22m 21s	gigantic_raman	ERR	86d28ae7f7ab15324c979f724648394d	a6a31806-e9dd-4852-894e-89a063a6c8ee	nextflow run main.nf
+2024-09-26 10:20:45	20m 23s	nasty_volta	ERR	86d28ae7f7ab15324c979f724648394d	2677bb45-1d0c-4978-b367-fd9fd6a69fed	nextflow run main.nf
+2024-09-26 10:41:55	6m 9s	awesome_avogadro	ERR	86d28ae7f7ab15324c979f724648394d	62c7ef24-2a3e-482d-b26f-8cee15cf45f8	nextflow run main.nf
+2024-09-26 10:55:27	6m 46s	loving_nobel	ERR	86d28ae7f7ab15324c979f724648394d	dc6a79a2-391a-4cfc-968f-b73faab178b4	nextflow run main.nf
+2024-09-26 11:39:13	4.6s	magical_gutenberg	ERR	86d28ae7f7ab15324c979f724648394d	38e589ce-d3d4-4d39-9a85-4abcfe9fc435	nextflow run main.nf
+2024-09-26 11:39:35	-	mad_kare	-	86d28ae7f7ab15324c979f724648394d	a37d1295-9bf4-4510-bce9-befde48a7a1c	nextflow run main.nf
+2024-09-26 11:40:06	20h 20m 40s	agitated_rutherford	ERR	86d28ae7f7ab15324c979f724648394d	2e3ce24e-8baa-4e3d-bfda-0b43f54c637d	nextflow run main.nf
+2024-09-27 08:14:57	43.7s	spontaneous_hopper	ERR	86d28ae7f7ab15324c979f724648394d	a1508c9f-08e4-43bb-bacd-6c181d91ad12	nextflow run main.nf
+2024-09-27 08:16:29	22.8s	thirsty_colden	ERR	86d28ae7f7ab15324c979f724648394d	cda8f7f7-426f-419d-a5da-3c5d6fae8f8b	nextflow run main.nf
+2024-09-27 08:17:38	19.4s	intergalactic_mccarthy	ERR	86d28ae7f7ab15324c979f724648394d	0fb10ec7-fa74-48b6-89e7-a4b4284336f0	nextflow run main.nf
+2024-09-27 08:18:02	58m 55s	romantic_yalow	ERR	86d28ae7f7ab15324c979f724648394d	fa1af18c-ba1e-4780-b123-33c1b011c9ca	nextflow run main.nf
+2024-09-27 09:46:07	29m 12s	suspicious_raman	ERR	86d28ae7f7ab15324c979f724648394d	ab498b43-da7e-4607-a0aa-68c0d7ab3ed7	nextflow run main.nf
+2024-09-27 10:15:47	27s	tender_swanson	ERR	86d28ae7f7ab15324c979f724648394d	97ece2ea-9c29-49ca-a481-a8cb1aae4098	nextflow run main.nf
+2024-09-27 10:16:59	18.9s	compassionate_angela	ERR	86d28ae7f7ab15324c979f724648394d	13def3cc-72f6-420a-badc-2de31f97e7dd	nextflow run main.nf
+2024-09-27 10:18:34	2m 40s	gigantic_legentil	ERR	86d28ae7f7ab15324c979f724648394d	16c68c70-2007-440d-9643-3214a6f00152	nextflow run main.nf
+2024-09-27 10:22:24	3m 7s	hopeful_miescher	ERR	86d28ae7f7ab15324c979f724648394d	42f44c36-59f4-43ab-8764-809ab5c2840e	nextflow run main.nf --dataDir /aloy/home/ymartins/paprec_2024_revision/paprec_full_data --runningConfig /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/running_config.json --mode train --execution_step 3
+2024-09-27 10:51:56	4m 35s	evil_lamarr	ERR	86d28ae7f7ab15324c979f724648394d	9a4c59ce-6643-483f-bec8-3a9b340a09cc	nextflow run main.nf --dataDir /aloy/home/ymartins/paprec_2024_revision/paprec_full_data --runningConfig /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/running_config.json --mode train --execution_step 3
+2024-09-27 10:59:55	12m 48s	maniac_lavoisier	ERR	86d28ae7f7ab15324c979f724648394d	75b866d6-6a8d-4bc7-9ef9-3b3632d1efe4	nextflow run main.nf
+2024-09-27 11:16:48	-	goofy_agnesi	-	86d28ae7f7ab15324c979f724648394d	aaabdc12-0bef-4263-b465-bcdfc95edbbf	nextflow run main.nf
+2024-09-27 11:24:20	2m 15s	reverent_yalow	ERR	86d28ae7f7ab15324c979f724648394d	2227ba97-bc91-4de7-a81b-857528171b65	nextflow run main.nf --dataDir /aloy/home/ymartins/paprec_2024_revision/paprec_full_data --runningConfig /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/running_config.json --mode train --execution_step 3
+2024-09-27 11:47:26	3.3s	scruffy_northcutt	ERR	86d28ae7f7ab15324c979f724648394d	95875bc8-82f2-4522-8289-3c7a93fc93f3	nextflow run main.nf --dataDir /aloy/home/ymartins/paprec_2024_revision/paprec_full_data --runningConfig /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/running_config.json --mode train --execution_step 2
+2024-09-27 11:48:06	36.6s	peaceful_einstein	ERR	86d28ae7f7ab15324c979f724648394d	8412cf84-a98f-4f31-9135-b2d33c1cabfc	nextflow run main.nf --dataDir /aloy/home/ymartins/paprec_2024_revision/paprec_full_data --runningConfig /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/running_config.json --mode train --execution_step 2
+2024-09-27 11:49:05	42.7s	sleepy_almeida	ERR	86d28ae7f7ab15324c979f724648394d	ff2af863-3df8-4488-bcfb-46fe86f7edba	nextflow run main.nf --dataDir /aloy/home/ymartins/paprec_2024_revision/paprec_data --runningConfig /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/running_config.json --mode train --execution_step 2
+2024-09-27 11:51:31	14m 15s	scruffy_caravaggio	ERR	86d28ae7f7ab15324c979f724648394d	4499da30-e3bf-487a-bba3-2fd7352dcff3	nextflow run main.nf --dataDir /aloy/home/ymartins/paprec_2024_revision/paprec_data --runningConfig /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/running_config.json --mode train --execution_step 2
+2024-09-27 12:14:35	2m 32s	hungry_colden	OK	86d28ae7f7ab15324c979f724648394d	791bcf31-dec9-4674-a987-f92b0e68a029	nextflow run main.nf --dataDir /aloy/home/ymartins/paprec_2024_revision/paprec_full_data --runningConfig /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/running_config.json --mode train --execution_step 2
+2024-09-27 12:18:11	45m 39s	hungry_sanger	OK	86d28ae7f7ab15324c979f724648394d	62756c14-ac17-4198-99da-6613b9fb81ea	nextflow run main.nf --dataDir /aloy/home/ymartins/paprec_2024_revision/paprec_data --runningConfig /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/running_config.json --mode train --execution_step 2
+2024-09-27 12:48:50	2h 19m 25s	fabulous_lalande	ERR	86d28ae7f7ab15324c979f724648394d	d800d9d3-01c3-4772-92de-8e1aad214871	nextflow run main.nf
+2024-09-27 15:48:41	50.6s	tender_crick	OK	86d28ae7f7ab15324c979f724648394d	0d1056a1-0a84-4439-8b76-beb9703011cf	nextflow run main.nf
+2024-09-27 17:19:13	1m 18s	magical_miescher	ERR	86d28ae7f7ab15324c979f724648394d	0298309b-9b31-4c7d-a896-6cefd1c6be99	nextflow run main.nf --dataDir /aloy/home/ymartins/paprec_2024_revision/paprec_data --runningConfig /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/running_config.json --mode train --execution_step 3
+2024-09-27 17:29:25	3m 45s	stupefied_wright	ERR	86d28ae7f7ab15324c979f724648394d	e83ca7b0-d4aa-460c-bfab-265f91e33d8d	nextflow run main.nf --dataDir /aloy/home/ymartins/paprec_2024_revision/paprec_data --runningConfig /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/running_config.json --mode train --execution_step 3
+2024-09-27 17:45:53	19m 12s	scruffy_mclean	ERR	86d28ae7f7ab15324c979f724648394d	63606542-6ea4-486f-9018-b2da65395ae6	nextflow run main.nf --dataDir /aloy/home/ymartins/paprec_2024_revision/paprec_data --runningConfig /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/running_config.json --mode train --execution_step 3
+2024-09-27 21:39:15	-	maniac_panini	-	a76bb363fbc941c3defd22574b7bd511	771b8440-27ed-433f-8f1f-80db14e7547c	nextflow run main.nf
+2024-09-27 21:45:03	1h 35m 37s	jovial_knuth	ERR	a76bb363fbc941c3defd22574b7bd511	1dd10941-84c0-44c5-b87a-d8a4ba12a5e2	nextflow -log execution.log -bg run main.nf
+2024-09-27 23:36:59	4m 8s	gigantic_engelbart	ERR	a76bb363fbc941c3defd22574b7bd511	565e93a3-7f89-458a-b016-845d86866f6a	nextflow run main.nf
+2024-09-28 01:05:07	26m 47s	boring_hamilton	ERR	7691758de470c6f47b60f3cdc69ef6ed	9126ed14-e2bf-4377-b77f-e748845a7632	nextflow run main.nf
+2024-09-28 01:54:28	51m 1s	compassionate_avogadro	ERR	7691758de470c6f47b60f3cdc69ef6ed	4ed8fa6e-9f08-468c-a127-561c25089e52	nextflow run main.nf
+2024-09-28 03:11:10	4m 14s	sad_lalande	ERR	7691758de470c6f47b60f3cdc69ef6ed	1f41198e-6e96-4ae2-94da-b787f47e711b	nextflow run main.nf
+2024-09-28 03:20:15	1h 37m 33s	lethal_bernard	OK	7691758de470c6f47b60f3cdc69ef6ed	5ac52234-985d-40a2-b9a4-3ac046d7c8a6	nextflow -bg run main.nf
+2024-09-28 14:53:49	5m 30s	soggy_swirles	ERR	a4ccae641aafa42937a4fb36d01d2098	577178a1-234f-478c-b392-c26bb60f108d	nextflow -log evaluation.log -bg run main.nf
+2024-09-28 15:49:39	2h 2m 30s	zen_williams	ERR	a4ccae641aafa42937a4fb36d01d2098	cd581868-caf5-471d-99a4-0e7418518bd6	nextflow -log evaluation.log -bg run main.nf
+2024-09-28 18:10:33	3h 24m 10s	suspicious_aryabhata	OK	a4ccae641aafa42937a4fb36d01d2098	828f7f46-5bb0-45ad-bc54-bbe5ec3d7266	nextflow -log evaluation.log -bg run main.nf
+2024-09-28 23:04:30	2h 31m 40s	gloomy_meucci	OK	e91e866b0ec445e474833f9c7741a60a	3512e35b-9026-4b02-9eb8-59c8e6cf2a28	nextflow -log data_selection_raw.log -bg run main.nf
+2024-09-30 13:39:16	49.5s	lonely_crick	ERR	2575a706811f538c938399d43438c621	6e9e673e-57f3-4a26-a59f-67f574feae8f	nextflow -log feat_ext_test_iedbSet.log -bg run main.nf
+2024-09-30 13:42:31	4m 32s	stoic_heyrovsky	ERR	2575a706811f538c938399d43438c621	b89ea047-3fbb-4555-96d0-932b0a49f604	nextflow -log feat_ext_test_iedbSet.log -bg run main.nf
+2024-09-30 14:17:52	2m 30s	soggy_nobel	ERR	2575a706811f538c938399d43438c621	474efe1c-4ad9-4d3b-b545-80d883d93600	nextflow -log feat_ext_test_iedbSet.log -bg run main.nf
+2024-09-30 15:09:11	2m 37s	nasty_jang	OK	2575a706811f538c938399d43438c621	92b7e164-e038-4424-a992-3ca7a8c96c32	nextflow -log feat_ext_test_iedbSet.log -bg run main.nf
+2024-09-30 17:19:07	18.7s	sleepy_euler	ERR	4668c0dc15c7583a837a044e85a8a384	b9922e93-2c92-4512-ace6-4569b46a7353	nextflow -log prediction_comparison_iedb_sapa.log -bg run main.nf
+2024-09-30 17:28:58	9.6s	golden_ardinghelli	ERR	4668c0dc15c7583a837a044e85a8a384	3f324eb8-c204-4b01-a963-3a5824a08846	nextflow -log prediction_comparison_iedb_sapa.log -bg run main.nf
