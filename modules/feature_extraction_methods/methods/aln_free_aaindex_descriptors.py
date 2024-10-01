@@ -47,7 +47,7 @@ class Implementation_vaxijenModified(MetaExtractionMethod):
         n=len(seq)
         
         l=max_lag
-        l = 4
+        l = 8
         
         lags=list(range(1, l+1))
         a=[]

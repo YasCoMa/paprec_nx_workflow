@@ -137,7 +137,7 @@ class Evaluation:
 			if( not os.path.isdir(best_models_folder) ):
 				os.mkdir(best_models_folder)
 
-			execo = PipelineRankModel()
+			execo = PipelineRankModel( self.dataDir )
 				
 		if( args.execution_mode == 2 ):
 			execo.make_feature_selection_general_dataset( outfolder, imbalance_method)

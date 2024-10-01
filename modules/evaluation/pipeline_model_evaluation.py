@@ -7,7 +7,9 @@ from pycaret.classification import *
 
 class PipelineRankModel:
 
-	def __init__(self):
+	def __init__(self, rootFolder):
+		self.dataDir = rootFolder
+
 		self.classifier_universe = { 'Extra Trees Classifier': 'et', 'Random Forest Classifier': 'rf', 'Ada Boost Classifier': 'ada', 'Gradient Boosting Classifier': 'gbc', 'Decision Tree Classifier': 'dt', 'SVM - Linear Kernel': 'svm', 'Naive Bayes': 'nb', 'CatBoost Classifier': 'catboost', 'Light Gradient Boosting Machine': 'lightgbm', 'Extreme Gradient Boosting': 'xgboost' }
 		self.variation_classifiers = ['et', 'rf', 'ada', 'gbc', 'dt', 'svm', 'nb']
 		self.xai_classifiers = ['dt', 'catboost', 'lightgbm', 'et', 'rf', 'xgboost']
@@ -108,6 +110,7 @@ class PipelineRankModel:
 
 		if( include_explainability):
 			exp.interpret_model( best, plot='summary', save=True )
+			exp.interpret_model( best, plot='correlation', save=True )
 		os.chdir(dir_bkp)
 
 	def _run_default_ml_pipeline(self, wd, subfolder, imbalanceMethod = 'downsampling', rankMetric='mcc', has_feat_selection=False, include_explainability=False ):
@@ -146,5 +149,11 @@ class PipelineRankModel:
 				rank_analysis[subfolder]['source'] = model_file
 
 		global_model, model_id = self._choose_save_best_global_model( outfolder, rank_analysis, rankMetric)
+		
+		summary_file = os.path.join( outfolder, 'summary_best_models.tsv' )
+
+		df = pd.read_csv( summary_file, sep='\t')
+		df = df.sort_values(by=rankMetric, ascending=False)
+		df.to_csv(summary_file, sep='\t',  index=None)
 
 		return global_model, model_id
