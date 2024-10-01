@@ -55,14 +55,12 @@ class Prediction:
 						d = tds['identifier']
 						
 						configs = {}
-						goldenset_path = ""
-						if('goldenset_path' in e and 'compare_to_goldenset' in e):
-							if( os.path.isfile( e['goldenset_path'] ) ):
-								if( e['compare_to_goldenset'] ):
-									goldensets = e['goldensets']
-									configs = { 'epitope': [], 'protein': [] }
-									for gs in goldensets:
-										configs[ gs['target'] ].append(gs)
+						if('goldensets' in e and 'compare_to_goldenset' in e):
+							if( e['compare_to_goldenset'] ):
+								goldensets = e['goldensets']
+								configs = { 'epitope': [], 'protein': [] }
+								for gs in goldensets:
+									configs[ gs['target'] ].append(gs)
 
 						dss = [d]
 						source = tds['source']
@@ -86,7 +84,7 @@ class Prediction:
 
 						i=0
 						for d in dss:
-							_ide = f"{d},{goldenset_path},{source}"
+							_ide = f"{d},{source}"
 							valid_queue.add(_ide)
 							i+=1
 
@@ -116,10 +114,9 @@ class Prediction:
 
 		execo = None
 		outfolder = ''
-		goldenset_path = ''
 		if( args.execution_mode >= 2 ):
 			task_id = args.setup_instance.split('/')[-1].split('.')[0]
-			dataset, goldenset_path, source = open( args.setup_instance ).read().split('\n')[0].split(',')
+			dataset, source = open( args.setup_instance ).read().split('\n')[0].split(',')
 			
 			best_models_folder = os.path.join(self.dataDir, 'best_trained_models')
 
@@ -130,7 +127,8 @@ class Prediction:
 			self._mark_as_ready('prediction', task_id)
 		
 		if( args.execution_mode == 3 ):
-			if( goldenset_path != ''):
+			comparison_file = os.path.join( self.dataDir, d, 'golden_config.json')
+			if( os.path.isfile( comparison_file ) ):
 				global_model, model_id = execo.perform_comparison( goldenset_path, source )
 			self._mark_as_ready('comparison', task_id)
 		

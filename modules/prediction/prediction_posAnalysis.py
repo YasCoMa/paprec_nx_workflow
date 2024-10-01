@@ -55,7 +55,6 @@ class PredictionAnalysis:
 				inter_features.append(f)
 		
 		final_input = df[ inter_features ].fillna(0)
-		print( '---', method, subfolder,len(final_input), len(inter_features), model_features)
 		self.x = final_input
 		
 		self.data_info = df[ ['item_id', 'item_sequence'] ]
@@ -81,6 +80,7 @@ class PredictionAnalysis:
 				with open( path, 'r') as g:
 					infom = json.load(g)
 
+				infom['model_path'] = infom['model_path'].replace('paprec_dummy', 'paprec_data')
 				subfolder = infom['model_path'].split('/')[-1].replace("-global_best","")
 				if( os.path.isfile(infom['model_path']) ):
 					model = joblib.load( infom['model_path'] )
@@ -90,7 +90,6 @@ class PredictionAnalysis:
 						dirout = '/'.join(self.root[:-1].split('/')[:-1])
 						path = os.path.join( dirout, infom['model_path'] )
 						model = joblib.load( path )
-				print(model, infom['model_path'])
 				#subfolder = infom['subfolder']
 		return subfolder, model
 
@@ -177,7 +176,8 @@ class PredictionAnalysis:
 				probability = scores[s][1][label]
 
 				labels.append(label)
-				all_probs.append(probability)
+				if(label==1):
+					all_probs.append(probability)
 
 				f.write( f"{item_id}\t{dataset}\t{method}\t{label}\t{probability}\n")
 
