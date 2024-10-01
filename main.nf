@@ -78,7 +78,7 @@ workflow {
     
 }
 
-// nextflow run main.nf --dataDir /mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/backup/irbBCN_job/paprec_data --runningConfig /mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/Dropbox/irbBCN_job/paprec_2024_revision/paprec_nx_workflow/running_config_laptop.json --mode test --execution_step 1
+// nextflow run main.nf --dataDir /mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/backup/irbBCN_job/paprec_data --runningConfig /mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/Dropbox/irbBCN_job/paprec_2024_revision/paprec_nx_workflow/running_config_laptop.json --mode test --execution_step 2
 
 // nextflow run main.nf --dataDir /aloy/home/ymartins/paprec_2024_revision/paprec_full_data --runningConfig /aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/running_config.json --mode test --execution_step 1
 
