@@ -160,7 +160,7 @@ class PredictionAnalysis:
 
 		selected_file = os.path.join( self.resultsFolder, 'selected_antigenic_items.tsv')
 		g = open( selected_file, 'w' )
-		g.write('item_id\titem_sequence\tratio_agreement\tmean_probability\n')
+		g.write('item_id\tratio_agreement\tmean_probability\n')
 		
 		outfile = os.path.join( self.resultsFolder, 'summary_table_predictions.tsv')
 		f = open( outfile, 'w' )
@@ -184,9 +184,9 @@ class PredictionAnalysis:
 				f.write( f"{item_id}\t{dataset}\t{method}\t{label}\t{probability}\n")
 
 			ratio = sum(labels)/total
-			mean_prob = sum(all_probs)/total
+			mean_prob = sum(all_probs)/sum(labels)
 			if( ratio > 0 ):
-				g.write( f"{item_id}\t{item_sequence}\t{ratio}\t{mean_prob}\n")
+				g.write( f"{item_id}\t{ratio}\t{mean_prob}\n")
 		f.close()
 		g.close()
 
