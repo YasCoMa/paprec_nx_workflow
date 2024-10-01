@@ -2,12 +2,12 @@ nextflow.enable.dsl = 2
 
 params.paprecDir="/mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/Dropbox/irbBCN_job/paprec_2024_revision/paprec_nx_workflow/"
 
-params.mode="test"
+params.mode="train"
 params.execution_step=3
 //params.dataDir="/mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/backup/irbBCN_job/paprec_data"
 //params.runningConfig="/mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/Dropbox/irbBCN_job/paprec_2024_revision/paprec_nx_workflow/running_config.json"
 
-params.dataDir="/aloy/home/ymartins/paprec_2024_revision/paprec_data"
+params.dataDir="/aloy/home/ymartins/paprec_2024_revision/paprec_dummy"
 params.runningConfig="/aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/running_config.json"
 
 params.help = false

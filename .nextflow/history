@@ -61,3 +61,12 @@
 2024-09-30 15:09:11	2m 37s	nasty_jang	OK	2575a706811f538c938399d43438c621	92b7e164-e038-4424-a992-3ca7a8c96c32	nextflow -log feat_ext_test_iedbSet.log -bg run main.nf
 2024-09-30 17:19:07	18.7s	sleepy_euler	ERR	4668c0dc15c7583a837a044e85a8a384	b9922e93-2c92-4512-ace6-4569b46a7353	nextflow -log prediction_comparison_iedb_sapa.log -bg run main.nf
 2024-09-30 17:28:58	9.6s	golden_ardinghelli	ERR	4668c0dc15c7583a837a044e85a8a384	3f324eb8-c204-4b01-a963-3a5824a08846	nextflow -log prediction_comparison_iedb_sapa.log -bg run main.nf
+2024-10-01 09:38:23	17.6s	nice_kowalevski	ERR	4668c0dc15c7583a837a044e85a8a384	4b90f216-0145-442d-b392-77d097dd867b	nextflow -log prediction_comparison_iedb_sapa.log -bg run main.nf
+2024-10-01 10:50:53	16s	mad_meninsky	ERR	4668c0dc15c7583a837a044e85a8a384	5df15e13-f7d2-4f56-b9b0-d3464daa65f7	nextflow -log prediction_comparison_iedb_sapa.log -bg run main.nf
+2024-10-01 10:54:14	8.3s	shrivelled_picasso	ERR	4668c0dc15c7583a837a044e85a8a384	c964931f-7ee1-4cbc-8dc1-e6000fa58669	nextflow -log prediction_comparison_iedb_sapa.log run main.nf
+2024-10-01 11:06:01	10.4s	soggy_fermi	ERR	4668c0dc15c7583a837a044e85a8a384	fd7b458a-9f2e-4033-baa5-fb144d9b2c98	nextflow run main.nf
+2024-10-01 11:08:43	7.9s	elated_gautier	ERR	4668c0dc15c7583a837a044e85a8a384	64b94aa7-dd7a-43aa-806f-61d90f04a3e5	nextflow run main.nf
+2024-10-01 11:09:45	7.6s	ecstatic_liskov	ERR	4668c0dc15c7583a837a044e85a8a384	e3296a53-d386-4349-b1f0-b1b9c96ddfcd	nextflow run main.nf
+2024-10-01 11:21:40	47m 11s	peaceful_stonebraker	OK	ff817ba2b974f5458469e4c723d05b20	5f433bce-5d31-44e7-a113-bd9a5a874e64	nextflow run main.nf
+2024-10-01 12:53:29	2h 15m 59s	sharp_wing	ERR	a6acf6ebc7cbc6c99d6fd2fcce67ee68	b343beab-1adc-4d27-b548-d95eb7fe8560	nextflow run main.nf
+2024-10-01 15:46:45	1h 51m 52s	gigantic_fourier	OK	a6acf6ebc7cbc6c99d6fd2fcce67ee68	4fc22811-51f7-4aaf-89b1-1044e8738153	nextflow run main.nf

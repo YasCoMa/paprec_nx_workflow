@@ -55,6 +55,7 @@ class PredictionAnalysis:
 				inter_features.append(f)
 		
 		final_input = df[ inter_features ].fillna(0)
+		print( '---', method, subfolder,len(final_input), len(inter_features), model_features)
 		self.x = final_input
 		
 		self.data_info = df[ ['item_id', 'item_sequence'] ]
@@ -88,8 +89,8 @@ class PredictionAnalysis:
 					if( self.root .endswith('/') ):
 						dirout = '/'.join(self.root[:-1].split('/')[:-1])
 						path = os.path.join( dirout, infom['model_path'] )
-						model = joblib.load( infom['model_path'] )
-
+						model = joblib.load( path )
+				print(model, infom['model_path'])
 				#subfolder = infom['subfolder']
 		return subfolder, model
 
@@ -103,6 +104,7 @@ class PredictionAnalysis:
 				for m in self.pairs['methods']:
 					subfolder, model = self._load_model(d, m)
 					model_features = model.feature_names_in_
+
 					self._load_test_dataset( m, subfolder, d, model_features )
 					
 					labels = model.predict( self.x )
