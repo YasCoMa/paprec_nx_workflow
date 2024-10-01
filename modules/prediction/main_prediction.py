@@ -74,13 +74,13 @@ class Prediction:
 								if(len(configs) > 0):
 									comparison_file = os.path.join( self.dataDir, f"{d}_{t}", 'golden_config.json')
 									with open( comparison_file, 'w' ) as g:
-										json.dump( configs[t] )
+										json.dump( configs[t], g )
 						else:
 							if(len(configs) > 0):
 								allc = configs['protein'] + configs['epitope']
 								comparison_file = os.path.join( self.dataDir, d, 'golden_config.json')
 								with open( comparison_file, 'w' ) as g:
-									json.dump( allc )
+									json.dump( allc, g )
 
 						i=0
 						for d in dss:
