@@ -55,7 +55,7 @@ class Prediction:
 						d = tds['identifier']
 						
 						configs = {}
-						if('goldensets' in e and 'compare_to_goldenset' in e):
+						if( ('goldensets' in e) and ('compare_to_goldenset' in e) ):
 							if( e['compare_to_goldenset'] ):
 								goldensets = e['goldensets']
 								configs = { 'epitope': [], 'protein': [] }
@@ -127,7 +127,7 @@ class Prediction:
 			self._mark_as_ready('prediction', task_id)
 		
 		if( args.execution_mode == 3 ):
-			comparison_file = os.path.join( self.dataDir, d, 'golden_config.json')
+			comparison_file = os.path.join( self.dataDir, dataset, 'golden_config.json')
 			if( os.path.isfile( comparison_file ) ):
 				global_model, model_id = execo.perform_comparison( goldenset_path, source )
 			self._mark_as_ready('comparison', task_id)

@@ -112,6 +112,7 @@ class PredictionAnalysis:
 						probs = model.predict_proba( self.x )
 						probs = probs.tolist()
 					except:
+						probs = []
 						pass
 
 					idx = 0
@@ -124,12 +125,13 @@ class PredictionAnalysis:
 						if( not seqId in preds_by_sequence ):
 							preds_by_sequence[seqId] = { 'sequence': seq, 'all': {}, 'highest_score': '' }
 						
+						aux = f"{seqId},{seq}"
+						preds_by_model[_id][aux] = [ labels[idx], -1 ]
 						preds_by_sequence[seqId]['all'][_id] = [ labels[idx], -1 ]
 						if(len( probs) > 0):
+							preds_by_model[_id][aux] = [ labels[idx], probs[idx] ]
 							preds_by_sequence[seqId]['all'][_id] = [ labels[idx], probs[idx] ]
 
-						aux = f"{seqId},{seq}"
-						preds_by_model[_id][aux] = [ labels[idx], probs[idx] ]
 
 						idx += 1
 			
@@ -148,7 +150,7 @@ class PredictionAnalysis:
 		else:
 			with open( outfileS, 'r') as g:
 				preds_by_sequence = json.load( g)
-			with open( outfileM, 'w') as g:
+			with open( outfileM, 'r') as g:
 				preds_by_model = json.load(g)
 
 		return preds_by_sequence, preds_by_model
