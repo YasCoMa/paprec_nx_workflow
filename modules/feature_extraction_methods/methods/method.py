@@ -51,10 +51,7 @@ class MetaExtractionMethod:
                 for line in f:
                     l = line.replace('\n','').split('\t')
                     if(idx == 0):
-                        if(nfile == 0):
-                            new_col_names = l
-                        else:
-                            new_col_names = l[3:]
+                        new_col_names = l[3:]
                     else:
                         _id = l[0]
                         label = l[2]

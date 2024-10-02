@@ -94,7 +94,7 @@ class Implementation_vaxijenModified(MetaExtractionMethod):
         modes = [ 'unique_with_lags' ]
         for mode in modes:
             for i in df_input.index:
-                _id = str( df_input.loc[i, 'id'] ).replace('\t','').replace(' ','').replace(':','').replace('#','').replace('|','_').replace('-','_')
+                _id = str( df_input.loc[i, 'id'] ).replace('\t','').replace(' ','').replace(':','').replace('#','').replace('|','_').replace('-','_').replace('>','')
                 sequence = df_input.loc[i, 'sequence']
                 label = df_input.loc[i, 'label']
 

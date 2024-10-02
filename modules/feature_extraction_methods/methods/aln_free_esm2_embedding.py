@@ -28,18 +28,18 @@ class Implementation_es2Embedding(MetaExtractionMethod):
     def build_numerical_datasets(self, df_input, outfolder):
         modes = [ 'es2_model' ]
         for mode in modes:
-            ids = [ str(x).replace('\t','').replace(' ','').replace("'",'').replace('[','').replace(']','').replace(':','').replace('-','_') for x in df_input['id'].tolist() ]
+            ids = [ str(x).replace('\t','').replace(' ','').replace("'",'').replace('[','').replace(']','').replace(':','').replace('-','_').replace('>','') for x in df_input['id'].tolist() ]
             sequences = df_input['sequence'].tolist()
             labels = df_input['label'].tolist()
 
             i = 0
             for s in sequences:
                 _id = ids[i]
-                sequence = [s.upper()]
+                sequence = s.upper()
                 label = labels[i]
 
                 identifier = mode
-                features = self._calculate_features(sequence)[0].tolist()
+                features = self._calculate_features( [sequence] )[0].tolist()
                 n_features = len(features)
                 outfile = self._handle_subanalysis_file( outfolder, identifier, n_features = n_features)
 
