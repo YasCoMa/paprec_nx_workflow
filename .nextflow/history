@@ -93,3 +93,4 @@
 2024-10-02 16:41:16	2m 20s	stoic_pesquet	OK	0cf0e9d01d605e99efb79865e2f8ecf4	c56adb60-caa2-4064-a4f7-ec2389cf0ee5	nextflow run main.nf
 2024-10-02 17:03:25	12.3s	ridiculous_joliot	ERR	21e4c5fe6782e9f9815944ebda22373d	fa824893-7bf5-4989-9673-e6ca9f14b67f	nextflow -log train_feat_extraction_02-oct.log -bg run main.nf
 2024-10-02 17:03:51	8.5s	elegant_torvalds	ERR	21e4c5fe6782e9f9815944ebda22373d	183f925c-e174-4946-a60b-e85b71290062	nextflow -log train_feat_extraction_02-oct.log -bg run main.nf
+2024-10-02 17:05:38	1h 35m 17s	peaceful_mendel	OK	ba72b19912fa751b9bef1f8a711e074f	abf846c6-b5c8-4dcc-a3da-6d3d1f09a630	nextflow -log train_feat_extraction_02-oct.log -bg run main.nf
