@@ -42,8 +42,8 @@ class Dataset:
 			"gram+_epitope": { "target": "epitope", 'positive_file': 'dataset_pos.fasta', 'negative_file': 'dataset_neg.fasta' },
 			"gram-_epitope": { "target": "epitope", 'positive_file': 'dataset_pos.fasta', 'negative_file': 'dataset_neg.fasta' },
 			"gram+_protein": { "target": "protein", 'positive_file': 'dataset_pos.fasta', 'negative_file': 'dataset_neg.fasta' },
-			"gram-_protein": { 'positive_file': 'dataset_pos.fasta', 'negative_file': 'dataset_neg.fasta' },
-			"allgram_epitope": { "target": "protein", "target": "epitope", 'positive_file': 'dataset_pos.fasta', 'negative_file': 'dataset_neg.fasta' },
+			"gram-_protein": { "target": "protein", 'positive_file': 'dataset_pos.fasta', 'negative_file': 'dataset_neg.fasta' },
+			"allgram_epitope": { "target": "epitope", "target": "epitope", 'positive_file': 'dataset_pos.fasta', 'negative_file': 'dataset_neg.fasta' },
 			"allgram_protein": { "target": "protein", 'positive_file': 'dataset_pos.fasta', 'negative_file': 'dataset_neg.fasta' },
 		}
 

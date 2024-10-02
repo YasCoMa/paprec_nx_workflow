@@ -35,7 +35,7 @@ class Implementation_es2Embedding(MetaExtractionMethod):
             i = 0
             for s in sequences:
                 _id = ids[i]
-                sequence = [s]
+                sequence = [s.upper()]
                 label = labels[i]
 
                 identifier = mode

@@ -80,3 +80,16 @@
 2024-10-01 23:41:48	35.9s	cranky_wescoff	ERR	3329ef695aa0a48129c80f084961b56b	004dd1d2-34c0-4f55-8cc7-aae618bda174	nextflow run main.nf --dataDir /mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/backup/irbBCN_job/paprec_data --runningConfig /mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/Dropbox/irbBCN_job/paprec_2024_revision/paprec_nx_workflow/running_config_laptop.json --mode test --execution_step 3
 2024-10-01 23:43:43	41.6s	zen_magritte	ERR	3329ef695aa0a48129c80f084961b56b	1ba642e6-0ceb-408a-a7e1-57ca023c271b	nextflow run main.nf --dataDir /mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/backup/irbBCN_job/paprec_data --runningConfig /mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/Dropbox/irbBCN_job/paprec_2024_revision/paprec_nx_workflow/running_config_laptop.json --mode test --execution_step 3
 2024-10-01 23:47:32	35.8s	crazy_lovelace	OK	3329ef695aa0a48129c80f084961b56b	cda492c2-d68a-47ec-942d-d4c58dabf185	nextflow run main.nf --dataDir /mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/backup/irbBCN_job/paprec_data --runningConfig /mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/Dropbox/irbBCN_job/paprec_2024_revision/paprec_nx_workflow/running_config_laptop.json --mode test --execution_step 3
+2024-10-02 08:21:17	7m 43s	desperate_perlman	ERR	3329ef695aa0a48129c80f084961b56b	e92354c5-4f43-4fb8-9260-a747e7123f8b	nextflow run main.nf
+2024-10-02 10:09:17	1m 18s	berserk_engelbart	ERR	0cf0e9d01d605e99efb79865e2f8ecf4	fbb2c85d-4d0e-4bae-9909-a79958ee2108	nextflow run main.nf
+2024-10-02 10:12:26	1m 46s	mad_williams	ERR	0cf0e9d01d605e99efb79865e2f8ecf4	65854cc3-99d0-404a-a227-f3b54fb7b890	nextflow run main.nf
+2024-10-02 11:34:29	1m 37s	adoring_goodall	OK	0cf0e9d01d605e99efb79865e2f8ecf4	54c11fc7-8fcb-496f-8b64-701bf940cfbc	nextflow run main.nf
+2024-10-02 11:42:38	48.4s	infallible_keller	ERR	0cf0e9d01d605e99efb79865e2f8ecf4	c8c922a9-71bb-4f0a-8522-557fc0100463	nextflow run main.nf
+2024-10-02 11:49:22	49.4s	amazing_woese	ERR	0cf0e9d01d605e99efb79865e2f8ecf4	7b666d18-3d18-4ad8-b73e-6ab0f5fcfeaf	nextflow run main.nf
+2024-10-02 13:25:10	1m 45s	friendly_meninsky	ERR	0cf0e9d01d605e99efb79865e2f8ecf4	8c2e77bf-eeaf-42dd-970d-f5d479881c6c	nextflow run main.nf
+2024-10-02 14:04:04	5.3s	loquacious_fermat	ERR	0cf0e9d01d605e99efb79865e2f8ecf4	63b9c4ea-3df6-4a4f-91ff-400159bb48c8	nextflow run main.nf
+2024-10-02 15:17:16	24m 27s	romantic_khorana	ERR	0cf0e9d01d605e99efb79865e2f8ecf4	746e1998-9aac-43b0-aa32-8571956d6bd7	nextflow run main.nf
+2024-10-02 16:08:14	2m 37s	intergalactic_heisenberg	ERR	0cf0e9d01d605e99efb79865e2f8ecf4	76e4346e-5808-49df-b19f-acc21ba61a80	nextflow run main.nf
+2024-10-02 16:41:16	2m 20s	stoic_pesquet	OK	0cf0e9d01d605e99efb79865e2f8ecf4	c56adb60-caa2-4064-a4f7-ec2389cf0ee5	nextflow run main.nf
+2024-10-02 17:03:25	12.3s	ridiculous_joliot	ERR	21e4c5fe6782e9f9815944ebda22373d	fa824893-7bf5-4989-9673-e6ca9f14b67f	nextflow -log train_feat_extraction_02-oct.log -bg run main.nf
+2024-10-02 17:03:51	8.5s	elegant_torvalds	ERR	21e4c5fe6782e9f9815944ebda22373d	183f925c-e174-4946-a60b-e85b71290062	nextflow -log train_feat_extraction_02-oct.log -bg run main.nf

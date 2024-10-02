@@ -55,13 +55,14 @@ class Prediction:
 						d = tds['identifier']
 						
 						configs = {}
-						if( ('goldensets' in e) and ('compare_to_goldenset' in e) ):
-							if( e['compare_to_goldenset'] ):
-								goldensets = e['goldensets']
+						if( ('goldensets' in tds) and ('compare_to_goldenset' in tds) ):
+							if( tds['compare_to_goldenset'] ):
+								goldensets = tds['goldensets']
 								configs = { 'epitope': [], 'protein': [] }
 								for gs in goldensets:
 									configs[ gs['target'] ].append(gs)
 
+						
 						dss = [d]
 						source = tds['source']
 						if(source == 'predictor'):
@@ -69,24 +70,21 @@ class Prediction:
 							for t in ['epitope', 'protein']:
 								selected_file = os.path.join( self.dataDir, d, 'data_parsing_selection', f'selected_{t}s.fasta')
 								if( os.path.isfile(selected_file) ):
-									dss.append( f"{d}_{t}" )
+									valid_queue.add( f"{d}_{t},{source},{selected_file}" )
 
 								if(len(configs) > 0):
 									comparison_file = os.path.join( self.dataDir, f"{d}_{t}", 'golden_config.json')
 									with open( comparison_file, 'w' ) as g:
 										json.dump( configs[t], g )
 						else:
+							seq = tds['sequence_file']
+							valid_queue.add( f"{d},{source},{seq}" )
+
 							if(len(configs) > 0):
 								allc = configs['protein'] + configs['epitope']
 								comparison_file = os.path.join( self.dataDir, d, 'golden_config.json')
 								with open( comparison_file, 'w' ) as g:
 									json.dump( allc, g )
-
-						i=0
-						for d in dss:
-							_ide = f"{d},{source}"
-							valid_queue.add(_ide)
-							i+=1
 
 		taskFolder = os.path.join( self.tmpDir, 'tasks')
 		if( os.path.isdir( taskFolder ) ):
@@ -116,11 +114,11 @@ class Prediction:
 		outfolder = ''
 		if( args.execution_mode >= 2 ):
 			task_id = args.setup_instance.split('/')[-1].split('.')[0]
-			dataset, source = open( args.setup_instance ).read().split('\n')[0].split(',')
+			dataset, source, seqFile = open( args.setup_instance ).read().split('\n')[0].split(',')
 			
 			best_models_folder = os.path.join(self.dataDir, 'best_trained_models')
 
-			execo = PredictionAnalysis( self.dataDir, best_models_folder, dataset, source)
+			execo = PredictionAnalysis( self.dataDir, best_models_folder, dataset, source, seqFile)
 				
 		if( args.execution_mode == 2 ):
 			execo.perform_prediction(  )
@@ -129,7 +127,7 @@ class Prediction:
 		if( args.execution_mode == 3 ):
 			comparison_file = os.path.join( self.dataDir, dataset, 'golden_config.json')
 			if( os.path.isfile( comparison_file ) ):
-				global_model, model_id = execo.perform_comparison( goldenset_path, source )
+				execo.perform_comparison( )
 			self._mark_as_ready('comparison', task_id)
 		
 from argparse import RawTextHelpFormatter
