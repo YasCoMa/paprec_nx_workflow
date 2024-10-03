@@ -94,3 +94,12 @@
 2024-10-02 17:03:25	12.3s	ridiculous_joliot	ERR	21e4c5fe6782e9f9815944ebda22373d	fa824893-7bf5-4989-9673-e6ca9f14b67f	nextflow -log train_feat_extraction_02-oct.log -bg run main.nf
 2024-10-02 17:03:51	8.5s	elegant_torvalds	ERR	21e4c5fe6782e9f9815944ebda22373d	183f925c-e174-4946-a60b-e85b71290062	nextflow -log train_feat_extraction_02-oct.log -bg run main.nf
 2024-10-02 17:05:38	1h 35m 17s	peaceful_mendel	OK	ba72b19912fa751b9bef1f8a711e074f	abf846c6-b5c8-4dcc-a3da-6d3d1f09a630	nextflow -log train_feat_extraction_02-oct.log -bg run main.nf
+2024-10-02 19:20:44	3.7s	cheeky_mahavira	ERR	6a6aca63836078f63d61c779aa15767e	058aa895-0cc0-41ee-9feb-13f47c1be8f4	nextflow -log ../log_time_steps/train_evaluation_02-oct.log -bg run main.nf
+2024-10-02 19:21:22	28m 18s	irreverent_easley	ERR	6a6aca63836078f63d61c779aa15767e	23241cad-7eda-44e9-977a-9aa25dc7059b	nextflow -log ../log_time_steps/train_evaluation_02-oct.log -bg run main.nf
+2024-10-02 20:40:56	-	jolly_curry	-	6a6aca63836078f63d61c779aa15767e	b6fc7ff7-5162-4d21-a366-51c20fdc12cd	nextflow -log ../log_time_steps/train_evaluation_02-oct.log -bg run main.nf
+2024-10-02 21:33:06	-	confident_visvesvaraya	-	ba72b19912fa751b9bef1f8a711e074f	4f8b6cb1-9053-4816-98b3-ebeb3b9780b6	nextflow -log ../log_time_steps/train_feat_extraction_02-oct.log -bg run main.nf
+2024-10-02 21:37:07	45m 50s	stoic_wing	OK	ba72b19912fa751b9bef1f8a711e074f	b3f187e9-834f-49a8-91ef-4bb2c8511b42	nextflow -log ../log_time_steps/train_feat_extraction_02-oct.log -bg run main.nf
+2024-10-02 22:40:52	3h 38m	exotic_brown	OK	6a6aca63836078f63d61c779aa15767e	f8c9ec8a-a94f-4056-a604-f2c3cc395088	nextflow -log ../log_time_steps/train_evaluation_02-oct.log -bg run main.nf
+2024-10-03 07:58:19	3h 40m 42s	extravagant_poincare	OK	f1aec71d24c6efe2ec3d9c6341427610	1e0c1788-8f83-4b87-ae2b-97e6a5314569	nextflow -log ../log_time_steps/test_feat_extraction_03-oct.log -bg run main.nf
+2024-10-03 11:52:10	13m 42s	evil_woese	ERR	21e4c5fe6782e9f9815944ebda22373d	9623ccde-1095-41d6-abd7-0ce82d14cb6d	nextflow -log ../log_time_steps/test_prediction_03-oct.log -bg run main.nf
+2024-10-03 13:32:12	19m 26s	fervent_turing	OK	21e4c5fe6782e9f9815944ebda22373d	8f5cc126-cdef-4680-a6cf-ac1adcfb7d1d	nextflow -log ../log_time_steps/test_prediction_03-oct.log -bg run main.nf

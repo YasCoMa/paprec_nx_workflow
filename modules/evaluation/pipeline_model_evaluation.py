@@ -110,7 +110,7 @@ class PipelineRankModel:
 
 		if( include_explainability):
 			exp.interpret_model( best, plot='summary', save=True )
-			exp.interpret_model( best, plot='correlation', save=True )
+			#exp.interpret_model( best, plot='correlation', save=True )
 		os.chdir(dir_bkp)
 
 	def _run_default_ml_pipeline(self, wd, subfolder, imbalanceMethod = 'downsampling', rankMetric='mcc', has_feat_selection=False, include_explainability=False ):

@@ -202,8 +202,10 @@ class PredictionAnalysis:
 
 					f.write( f"{item_id}\t{dataset}\t{method}\t{label}\t{probability}\n")
 
-				ratio = sum(labels)/total
-				mean_prob = sum(all_probs)/sum(labels)
+				votes = sum(labels)
+				ratio = votes / total
+				if( votes > 0 ):
+					mean_prob = sum(all_probs) / votes
 				if( ratio > 0 ):
 					g.write( f"{item_id}\t{ratio}\t{mean_prob}\n")
 			f.close()
