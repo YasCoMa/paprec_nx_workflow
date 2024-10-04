@@ -103,3 +103,15 @@
 2024-10-03 07:58:19	3h 40m 42s	extravagant_poincare	OK	f1aec71d24c6efe2ec3d9c6341427610	1e0c1788-8f83-4b87-ae2b-97e6a5314569	nextflow -log ../log_time_steps/test_feat_extraction_03-oct.log -bg run main.nf
 2024-10-03 11:52:10	13m 42s	evil_woese	ERR	21e4c5fe6782e9f9815944ebda22373d	9623ccde-1095-41d6-abd7-0ce82d14cb6d	nextflow -log ../log_time_steps/test_prediction_03-oct.log -bg run main.nf
 2024-10-03 13:32:12	19m 26s	fervent_turing	OK	21e4c5fe6782e9f9815944ebda22373d	8f5cc126-cdef-4680-a6cf-ac1adcfb7d1d	nextflow -log ../log_time_steps/test_prediction_03-oct.log -bg run main.nf
+2024-10-04 07:55:19	1m 34s	evil_poisson	OK	21e4c5fe6782e9f9815944ebda22373d	3a12b719-3cc3-4470-95bd-acadcc7a09d3	nextflow -bg run main.nf
+2024-10-04 07:58:51	1m 14s	angry_bartik	OK	21e4c5fe6782e9f9815944ebda22373d	fa2596b6-c2c6-4b67-995c-cda37598c96b	nextflow -bg run main.nf
+2024-10-04 16:07:53	-	astonishing_kimura	-	f1aec71d24c6efe2ec3d9c6341427610	3494c48e-ab37-4e0e-a0eb-061a2301a4e9	nextflow -log ../log_time_steps/test_feat_extraction_eskape_04-oct.log -bg run main.nf
+2024-10-04 16:10:17	15.8s	crazy_fermi	ERR	b31e4139fb5a0de99fe336c6a49fd62b	1e5f1d2b-de58-445d-87b4-d258b897ab9d	nextflow -log ../log_time_steps/test_feat_extraction_eskape_04-oct.log -bg run main.nf
+2024-10-04 16:13:51	53.6s	goofy_bose	ERR	b31e4139fb5a0de99fe336c6a49fd62b	f210bb60-9f2a-4cab-9433-8858c3fa1ac0	nextflow -log ../log_time_steps/test_feat_extraction_eskape_04-oct.log -bg run main.nf
+2024-10-04 16:38:19	41.2s	gloomy_lumiere	ERR	b31e4139fb5a0de99fe336c6a49fd62b	710a16d7-b10c-4402-a2b4-43bcb58165de	nextflow -log ../log_time_steps/test_feat_extraction_eskape_04-oct.log -bg run main.nf
+2024-10-04 16:49:40	8.5s	happy_banach	ERR	b31e4139fb5a0de99fe336c6a49fd62b	281db447-c62f-4c94-9c5c-f7917fa81b6d	nextflow -log ../log_time_steps/test_feat_extraction_eskape_04-oct.log -bg run main.nf
+2024-10-04 16:50:15	8m 5s	fabulous_raman	OK	b31e4139fb5a0de99fe336c6a49fd62b	0bac0777-c215-4116-9df2-60ef3aec06ac	nextflow -log ../log_time_steps/test_feat_extraction_eskape_04-oct.log -bg run main.nf
+2024-10-04 17:00:06	34.5s	clever_gautier	ERR	6d04d31a659f4407d59067d1b4deb732	240811e3-d079-4338-bb38-eda40247652a	nextflow -log ../log_time_steps/test_prediction_eskape_04-oct.log -bg run main.nf
+2024-10-04 17:07:01	8m 28s	crazy_davinci	OK	b31e4139fb5a0de99fe336c6a49fd62b	9f3c5f3d-85d4-4c51-8f2f-bd7ddab4f51e	nextflow -log ../log_time_steps/test_feat_extraction_eskape_04-oct.log -bg run main.nf
+2024-10-04 17:41:41	4m 31s	trusting_pasteur	OK	b31e4139fb5a0de99fe336c6a49fd62b	f14ffca0-17c0-429c-9526-ceff004f8e24	nextflow -log ../log_time_steps/test_prediction_eskape_04-oct.log -bg run main.nf
+2024-10-04 17:46:44	2m 13s	soggy_ekeblad	OK	6d04d31a659f4407d59067d1b4deb732	057d08cc-9a30-4aa3-a3a4-1311973042cf	nextflow -log ../log_time_steps/test_prediction_eskape_04-oct.log -bg run main.nf

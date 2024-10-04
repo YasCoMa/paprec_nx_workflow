@@ -178,38 +178,41 @@ class PredictionAnalysis:
 		predictionsS, predictionsM = self._load_predictions()
 
 		selected_file = os.path.join( self.resultsFolder, 'selected_antigenic_items.tsv')
-		if( not os.path.isfile(selected_file) ):
-			g = open( selected_file, 'w' )
-			g.write('item_id\tratio_agreement\tmean_probability\n')
-			
-			outfile = os.path.join( self.resultsFolder, 'summary_table_predictions.tsv')
-			f = open( outfile, 'w' )
-			f.write('item_id\tdataset\tmethod\tlabel\tprobability\n')
-			for item_id in predictionsS:
+		#if( not os.path.isfile(selected_file) ):
+		g = open( selected_file, 'w' )
+		g.write('item_id\tratio_agreement\tvoters\tmean_probability\n')
+		
+		outfile = os.path.join( self.resultsFolder, 'summary_table_predictions.tsv')
+		f = open( outfile, 'w' )
+		f.write('item_id\tdataset\tmethod\tlabel\tprobability\n')
+		for item_id in predictionsS:
 
-				scores = predictionsS[item_id]['all']
-				all_probs = []
-				labels = []
-				total = len(scores)
-				for s in scores:
-					dataset, method = s.split(',')
-					label = scores[s][0]
-					probability = scores[s][1][label]
+			scores = predictionsS[item_id]['all']
+			all_probs = []
+			labels = []
+			voters = []
+			total = len(scores)
+			for s in scores:
+				dataset, method = s.split(',')
+				label = scores[s][0]
+				probability = scores[s][1][label]
 
-					labels.append(label)
-					if(label==1):
-						all_probs.append(probability)
+				labels.append(label)
+				if(label==1):
+					all_probs.append(probability)
+					voters.append(s)
 
-					f.write( f"{item_id}\t{dataset}\t{method}\t{label}\t{probability}\n")
+				f.write( f"{item_id}\t{dataset}\t{method}\t{label}\t{probability}\n")
 
-				votes = sum(labels)
-				ratio = votes / total
-				if( votes > 0 ):
-					mean_prob = sum(all_probs) / votes
-				if( ratio > 0 ):
-					g.write( f"{item_id}\t{ratio}\t{mean_prob}\n")
-			f.close()
-			g.close()
+			votes = sum(labels)
+			ratio = votes / total
+			if( votes > 0 ):
+				mean_prob = sum(all_probs) / votes
+			if( ratio > 0 ):
+				voters = ';'.join(voters)
+				g.write( f"{item_id}\t{ratio}\t{voters}\t{mean_prob}\n")
+		f.close()
+		g.close()
 
 	def _load_goldenset(self, goldenset):
 		df = pd.read_csv(goldenset, sep='\t')

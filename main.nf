@@ -8,7 +8,7 @@ params.execution_step=3
 //params.runningConfig="/mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/Dropbox/irbBCN_job/paprec_2024_revision/paprec_nx_workflow/running_config.json"
 
 params.dataDir="/aloy/home/ymartins/paprec_2024_revision/paprec_data"
-params.runningConfig="/aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/running_config.json"
+params.runningConfig="/aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/eskape_running_config.json"
 
 params.help = false
 if (params.help) {
