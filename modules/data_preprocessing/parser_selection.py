@@ -256,7 +256,7 @@ class ParserCuration:
 
         step = "Filter by overlapping in iedb db"
         
-        outfile = os.path.join( dir_out, 'overlapping_violinet.tsv' )
+        outfile = os.path.join( dir_out, 'overlapping_iedb_epitopes.tsv' )
         if( not os.path.isfile( outfile ) ):
             epi_out=set()
             
