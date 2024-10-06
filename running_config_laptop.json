@@ -17,65 +17,29 @@
 			"is_all_against_all": true, 
 			"test_data": [ 
 				{ 
-					"identifier": "paeruginosa_iedb_epitope", 
-					"source": "fasta", 
-					"sequence_file": "/mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/Dropbox/irbBCN_job/paprec_2024_revision/acc_quantification_SA-PA_application_case/out/all_iedb_paeru_29-09_epitope.fasta",
-					"compare_to_goldenset": true,
-					"goldensets": [
-						{ "target": "epitope", "identifier": "iedb_epitope", "path": "/mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/Dropbox/irbBCN_job/paprec_2024_revision/acc_quantification_SA-PA_application_case/out/all_iedb_paeru_29-09_epitope.tsv" }
-					]
-				},
-				{ 
-					"identifier": "paeruginosa_iedb_protein", 
-					"source": "fasta", 
-					"sequence_file": "/mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/Dropbox/irbBCN_job/paprec_2024_revision/acc_quantification_SA-PA_application_case/out/all_iedb_paeru_29-09_protein.fasta",
-					"compare_to_goldenset": true,
-					"goldensets": [
-						{ "target": "protein", "identifier": "iedb_protein", "path": "/mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/Dropbox/irbBCN_job/paprec_2024_revision/acc_quantification_SA-PA_application_case/out/all_iedb_paeru_29-09_protein.tsv" }
-					]
-				},
-				{ 
-					"identifier": "saureus_iedb_epitope", 
-					"source": "fasta", 
-					"sequence_file": "/mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/Dropbox/irbBCN_job/paprec_2024_revision/acc_quantification_SA-PA_application_case/out/all_iedb_saureus_29-09_epitope.fasta",
-					"compare_to_goldenset": true,
-					"goldensets": [
-						{ "target": "epitope", "identifier": "iedb_epitope", "path": "/mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/Dropbox/irbBCN_job/paprec_2024_revision/acc_quantification_SA-PA_application_case/out/all_iedb_saureus_29-09_epitope.tsv" }
-					]
-				},
-				{ 
-					"identifier": "saureus_iedb_protein", 
-					"source": "fasta", 
-					"sequence_file": "/mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/Dropbox/irbBCN_job/paprec_2024_revision/acc_quantification_SA-PA_application_case/out/all_iedb_saureus_29-09_protein.fasta",
-					"compare_to_goldenset": true,
-					"goldensets": [
-						{ "target": "protein", "identifier": "iedb_protein", "path": "/mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/Dropbox/irbBCN_job/paprec_2024_revision/acc_quantification_SA-PA_application_case/out/all_iedb_saureus_29-09_protein.tsv" }
-					]
-				},
-				{ 
 					"identifier": "paeruginosa", 
 					"source": "predictor", 
-					"raw_prediction_file": "/mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/backup/irbBCN_job/paprec_full_data/raw_epitopes_paeruginosa.txt", 
-					"proteins_file": "/mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/backup/irbBCN_job/paprec_full_data/paeruginosa_seqs.faa", 
+					"raw_prediction_file": "/mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/Dropbox/irbBCN_job/paprec_2024_revision/application_prosite_filtering/raw_epitopes_paeruginosa.txt", 
+					"proteins_file": "/mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/Dropbox/irbBCN_job/paprec_2024_revision/application_prosite_filtering/paeruginosa_seqs.faa", 
 					"parameters_curation": {
 					"cell_type": "t", "threshold_sim_iedb": 1, "threshold_alleles": 30, "threshold_rank": 2 },
-					"compare_to_goldenset": false,
+					"compare_to_goldenset": true,
 					"goldensets": [
-						{ "target": "protein", "identifier": "vaxignml_protein", "path": "" },
-						{ "target": "epitope", "identifier": "vaxijen_epitope", "path": "" }
+						{ "target": "protein", "identifier": "vaxignml_protein", "path": "/mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/Dropbox/irbBCN_job/paprec_2024_revision/acc_quantification_SA-PA_application_case/out/acmpa_parsed_vaxignml.tsv" },
+						{ "target": "epitope", "identifier": "vaxijen_epitope", "path": "/mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/Dropbox/irbBCN_job/paprec_2024_revision/acc_quantification_SA-PA_application_case/out/acmpa_parsed_vaxijen.tsv" }
 					]
 				},
 				{ 
 					"identifier": "saureus", 
 					"source": "predictor", 
-					"raw_prediction_file": "/mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/backup/irbBCN_job/paprec_full_data/raw_epitopes_saureus.txt", 
-					"proteins_file": "/mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/backup/irbBCN_job/paprec_full_data/saureus_seqs.faa", 
+					"raw_prediction_file": "/mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/Dropbox/irbBCN_job/paprec_2024_revision/application_prosite_filtering/raw_epitopes_saureus.txt", 
+					"proteins_file": "/mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/Dropbox/irbBCN_job/paprec_2024_revision/application_prosite_filtering/saureus_seqs.faa", 
 					"parameters_curation": {
 					"cell_type": "t", "threshold_sim_iedb": 1, "threshold_alleles": 30, "threshold_rank": 2 },
-					"compare_to_goldenset": false,
+					"compare_to_goldenset": true,
 					"goldensets": [
-						{ "target": "protein", "identifier": "vaxignml_protein", "path": "" },
-						{ "target": "epitope", "identifier": "vaxijen_epitope", "path": "" }
+						{ "target": "protein", "identifier": "vaxignml_protein", "path": "/mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/Dropbox/irbBCN_job/paprec_2024_revision/acc_quantification_SA-PA_application_case/out/acmsa_parsed_vaxignml.tsv" },
+						{ "target": "epitope", "identifier": "vaxijen_epitope", "path": "/mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/Dropbox/irbBCN_job/paprec_2024_revision/acc_quantification_SA-PA_application_case/out/acmsa_parsed_vaxijen.tsv" }
 					]
 				}
 

@@ -231,7 +231,7 @@ class ParserCuration:
                                     gone.add(ide)
                                     epi_out.add(e)
                                     g.write('%s\t%s\t%s\n' %(id_, seq, e) )
-                        id_=line.split('|')[0]+'_'+line.split('|')[1]
+                        id_ = l.split('|')[0]+'_'+l.split('|')[1]
                         seq=''
                     else:
                         seq+=l
