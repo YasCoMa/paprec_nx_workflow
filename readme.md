@@ -60,9 +60,22 @@ We have developed a comprehensive pipeline for comparing models used in antigeni
 
 
 ### Run Screening:
+1. Examples of running configuration are shown in running_config.json and eskape_running_config.json
 
-1. ````nextflow run main.nf```` or ````nextflow run main.nf --dataDir /path/to/paprec_data --runningConfig /path/to/running_config.json --mode train --execution_step 0````
-2. Check the results obtained with those found in our article:
+2. Modes of execution:
+	- **Run All:**
+		- ````nextflow run main.nf```` or ````nextflow run main.nf --dataDir /path/to/paprec_data --runningConfig /path/to/running_config.json --mode train --execution_step 0````
+	- **Run Data Selection:**
+		- ````nextflow run main.nf --dataDir /path/to/paprec_data --runningConfig /path/to/running_config.json --mode test --execution_step 1````
+	- **Run Feature extraction:**
+		- ````nextflow run main.nf --dataDir /path/to/paprec_data --runningConfig /path/to/running_config.json --mode test --execution_step 2````
+		- Or ````nextflow run main.nf --dataDir /path/to/paprec_data --runningConfig /path/to/running_config.json --mode train --execution_step 2````
+	- **Run Evaluation:**
+		- ````nextflow run main.nf --dataDir /path/to/paprec_data --runningConfig /path/to/running_config.json --mode train --execution_step 3````
+	- **Run Prediction:**
+		- ````nextflow run main.nf --dataDir /path/to/paprec_data --runningConfig /path/to/running_config.json --mode test --execution_step 3````
+
+- Check the results obtained with those found in our article:
     - Bcipep dataset: https://www.dropbox.com/s/8ezeup4xiwb9p7n/bcipep_dataset.zip?dl=0
     - HLA dataset: https://www.dropbox.com/s/6vpfgvmsz9vd5r0/hla_dataset.zip?dl=0
     - Gram+ dataset: https://www.dropbox.com/s/l5wqpcsp4qc6ret/gram%2B_dataset.zip?dl=0

@@ -66,10 +66,7 @@ workflow {
     
     /*
     if( params.mode == "train" ){
-        else if( params.execution_step == 3 | params.execution_step == 0 ){
-            //TrainEvaluateModels_STEP( params.dataDir, params.runningConfig )
-        }
-        else if( params.execution_step == 5 | params.execution_step == 0 ){
+        if( params.execution_step == 5 | params.execution_step == 0 ){
             //PerformADAnalysis_STEP( params.dataDir, params.runningConfig )
         }
     }
