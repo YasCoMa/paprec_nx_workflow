@@ -174,45 +174,66 @@ class PredictionAnalysis:
 
 		return preds_by_sequence, preds_by_model
 
+	def _save_vote_by_model_type(self):
+		types = ['epitope', 'protein']
+		dss = {}
+		for t in types:
+			dss[t] = set()
+
+		for d in self.ds.datasets:	
+			target = self.ds.datasets[d]['target']
+			dss[target].add(d)
+
+		selected_file = os.path.join( self.resultsFolder, 'selected_antigenic_items.tsv')
+		g = open( selected_file, 'w' )
+		g.write('item_id\tmodel_type\tratio_agreement\tvoters\tmean_probability\n')
+		
+		outfile = os.path.join( self.resultsFolder, 'summary_table_predictions.tsv')
+		aux = pd.read_csv( outfile, sep='\t')
+		for t in types:
+			f = aux[ aux['dataset'].isin(dss[t]) ]
+			df = f[ ['item_id', 'label', 'probability'] ]
+			df = df.groupby( [ 'item_id' ] ).mean()
+			for k in df.index:
+				lb = 0
+				agg = df.loc[k, 'label']
+				if( agg > 0 ):
+					lb = 1
+				else:
+					agg = 1.0
+				score = df.loc[k, 'probability']
+
+				if( lb==1 ):
+					ds = f[ (f['item_id']==k) & (f['label']==1) ]['dataset'].values
+					mets = f[ (f['item_id']==k) & (f['label']==1) ]['method'].values
+					voters = []
+					for i,j in zip(ds,mets):
+						voters.append( f"{i},{j}" )
+					voters = ';'.join(voters)
+					g.write( f"{k}\t{t}\t{agg}\t{voters}\t{score}\n")
+		g.close()
+
 	def perform_prediction(self ):
 		predictionsS, predictionsM = self._load_predictions()
 
 		selected_file = os.path.join( self.resultsFolder, 'selected_antigenic_items.tsv')
 		if( not os.path.isfile(selected_file) ):
-			g = open( selected_file, 'w' )
-			g.write('item_id\tratio_agreement\tvoters\tmean_probability\n')
-			
 			outfile = os.path.join( self.resultsFolder, 'summary_table_predictions.tsv')
 			f = open( outfile, 'w' )
 			f.write('item_id\tdataset\tmethod\tlabel\tprobability\n')
 			for item_id in predictionsS:
 
 				scores = predictionsS[item_id]['all']
-				all_probs = []
-				labels = []
-				voters = []
 				total = len(scores)
 				for s in scores:
 					dataset, method = s.split(',')
 					label = scores[s][0]
 					probability = scores[s][1][label]
 
-					labels.append(label)
-					if(label==1):
-						all_probs.append(probability)
-						voters.append(s)
-
 					f.write( f"{item_id}\t{dataset}\t{method}\t{label}\t{probability}\n")
-
-				votes = sum(labels)
-				ratio = votes / total
-				if( votes > 0 ):
-					mean_prob = sum(all_probs) / votes
-				if( ratio > 0 ):
-					voters = ';'.join(voters)
-					g.write( f"{item_id}\t{ratio}\t{voters}\t{mean_prob}\n")
 			f.close()
-			g.close()
+
+			self._save_vote_by_model_type()
 
 	def _load_goldenset(self, goldenset):
 		df = pd.read_csv(goldenset, sep='\t')
