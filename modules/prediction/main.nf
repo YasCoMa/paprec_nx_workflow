@@ -45,9 +45,13 @@ workflow Prediction_STEP {
         outDir
         parameterFile
         mode
+        result
         
     main:
         pathTasks = PROCESS_SplitTasks(outDir, parameterFile, mode)
         flow = PROCESS_Prediction(outDir, parameterFile, pathTasks).collect()
         PROCESS_Comparison(outDir, parameterFile, pathTasks, flow)
+
+    emit:
+        flag = "ok"
 }

@@ -56,14 +56,14 @@ class FeatureExtraction:
 		combinations_test_file = {}
 		valid_queue = set()
 		for e in exps:
-			all_all = False
-			if( 'is_all_against_all' in e ):
-				all_all = e['is_all_against_all']
-
 			imbalance_method = 'downsampling'
 			if( e['task'] == 'train' and 'imbalance_method' in e ):
 				if( e['imbalance_method'] in ['smote', 'downsampling'] ):
 					imbalance_method = e['imbalance_method']
+
+			all_all = False
+			if( 'is_all_against_all' in e ):
+				all_all = e['is_all_against_all']
 
 			exec_method = set()
 			exec_dss = set()

@@ -115,6 +115,7 @@ workflow DataSelection_STEP {
         outDir
         parameterFile
         mode
+        result
         
     main:
         pathTasks = PROCESS_SplitPreProcessTasks(outDir, parameterFile, mode)
@@ -125,4 +126,7 @@ workflow DataSelection_STEP {
         flow5 = PROCESS_FilterOverlappingIedbEpitope(outDir, parameterFile, pathTasks, flow4 ).collect()
         flow6 = PROCESS_FilterOverlappingHumanProteome(outDir, parameterFile, pathTasks, flow5).collect()
         PROCESS_PrepareFinalFiles(outDir, parameterFile, pathTasks, flow6)
+
+    emit:
+        flag = "ok"
 }

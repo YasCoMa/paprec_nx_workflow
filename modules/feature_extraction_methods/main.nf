@@ -31,9 +31,13 @@ workflow FeaturesExtraction_STEP {
         outDir
         parameterFile
         mode
+        result
         
     main:
         pathTasks = PROCESS_SplitTasks(outDir, parameterFile, mode)
         //experiments = channel.fromPath( pathTasks )
         PROCESS_TransformDatasets(outDir, parameterFile, pathTasks)
+
+    emit:
+        flag = "ok"
 }

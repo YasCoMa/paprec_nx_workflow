@@ -98,7 +98,7 @@ class Prediction:
 				f.write( v + '\n' )
 			index += 1
 
-		stepout = os.path.join( self.tmpDir, 'evaluation.ready' )
+		stepout = os.path.join( self.tmpDir, 'prediction.ready' )
 		inn = os.listdir( os.path.join( self.tmpDir, 'tasks') )
 		out = os.listdir( os.path.join( self.tmpDir, 'ready') )
 		if(inn != out):

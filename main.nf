@@ -2,13 +2,13 @@ nextflow.enable.dsl = 2
 
 params.paprecDir="/mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/Dropbox/irbBCN_job/paprec_2024_revision/paprec_nx_workflow/"
 
-params.mode="test"
-params.execution_step=3
+params.mode="ada"
+params.execution_step=0
 //params.dataDir="/mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/backup/irbBCN_job/paprec_data"
 //params.runningConfig="/mnt/085dd464-7946-4395-acfd-e22026d52e9d/home/yasmmin/Dropbox/irbBCN_job/paprec_2024_revision/paprec_nx_workflow/running_config.json"
 
 params.dataDir="/aloy/home/ymartins/paprec_2024_revision/paprec_data"
-params.runningConfig="/aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/eskape_running_config.json"
+params.runningConfig="/aloy/home/ymartins/paprec_2024_revision/paprec_nx_workflow/running_config.json"
 
 params.help = false
 if (params.help) {
@@ -20,6 +20,7 @@ include { DataSelection_STEP } from './modules/data_preprocessing'
 include { FeaturesExtraction_STEP } from './modules/feature_extraction_methods'
 include { Evaluation_STEP } from './modules/evaluation'
 include { Prediction_STEP } from './modules/prediction'
+include { ADAnalysis_STEP } from './modules/applicability_domain_analysis'
 
 log.info """\
  P A P R E C  -  P I P E L I N E
@@ -31,6 +32,10 @@ log.info """\
  """
 
 process setEnvironment {
+    
+    output:
+    val 1, emit: flag
+
     script:
         """
         if [ ! -d "${params.dataDir}" ]; then
@@ -40,38 +45,35 @@ process setEnvironment {
 }
 
 workflow {
-    setEnvironment()
+    result = setEnvironment()
 
     if( params.mode == "test" ){
         if( params.execution_step == 1 | params.execution_step == 0 ){
-            DataSelection_STEP( params.dataDir, params.runningConfig, params.mode )
+            result = DataSelection_STEP( params.dataDir, params.runningConfig, params.mode, result )
         }
     }
     
-    if( params.execution_step == 2 | params.execution_step == 0 ){
-        FeaturesExtraction_STEP( params.dataDir, params.runningConfig, params.mode )
+    if( params.mode == "train" | params.mode == "test" ){
+        if( params.execution_step == 2 | params.execution_step == 0 ){
+            result = FeaturesExtraction_STEP( params.dataDir, params.runningConfig, params.mode, result  )
+        }
     }
 
     if( params.mode == "train" ){
         if( params.execution_step == 3 | params.execution_step == 0 ){
-            Evaluation_STEP( params.dataDir, params.runningConfig, params.mode )
+            result = Evaluation_STEP( params.dataDir, params.runningConfig, params.mode, result  )
         }
     }
 
     if( params.mode == "test" ){
         if( params.execution_step == 3 | params.execution_step == 0 ){
-            Prediction_STEP( params.dataDir, params.runningConfig, params.mode )
+            result = Prediction_STEP( params.dataDir, params.runningConfig, params.mode, result  )
         }
     }
-    
-    /*
-    if( params.mode == "train" ){
-        if( params.execution_step == 5 | params.execution_step == 0 ){
-            //PerformADAnalysis_STEP( params.dataDir, params.runningConfig )
-        }
+
+    if( params.mode == "ada" ){
+        ADAnalysis_STEP( params.dataDir, params.runningConfig, params.mode, result )
     }
-    
-    */
     
 }
 

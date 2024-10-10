@@ -3,6 +3,28 @@
 	"methods": ["aln_free_e_descriptors", "aln_free_aaindex_descriptors", "aln_free_esm2_embedding"],
 	"experiment_combinations": [ 
 		{
+            "task" : "ada",
+            "extraction_method": "aln_free_esm2_embedding",
+            "target": "epitope",
+            "is_all_against_all": true,
+            "perc_testset": "30",
+            "similarity_metrics": ["cityblock", "euclidean", "rogerstanimoto", "correlation", "cosine"],
+            "dataset_pairs": [
+                { "base": "allgram_epitope", "test": "gram+_epitope" }
+            ]
+        },
+		{
+            "task" : "ada",
+            "extraction_method": "aln_free_esm2_embedding",
+            "target": "protein",
+            "is_all_against_all": true,
+            "perc_testset": "30",
+            "similarity_metrics": ["cityblock", "euclidean", "rogerstanimoto", "correlation", "cosine"],
+            "dataset_pairs": [
+                { "base": "allgram_protein", "test": "gram+_protein" }
+            ]
+        },
+		{
 			"task": "train", 
 			"is_all_against_all": true,
 			"imbalance_treatment": "downsampling",

@@ -45,9 +45,13 @@ workflow Evaluation_STEP {
         outDir
         parameterFile
         mode
+        result
         
     main:
         pathTasks = PROCESS_SplitTasks(outDir, parameterFile, mode)
         flow = PROCESS_FeatureSelectionGeneralModel(outDir, parameterFile, pathTasks).collect()
         PROCESS_EvaluationPipelineRanking(outDir, parameterFile, pathTasks, flow)
+
+    emit:
+        flag = "ok"
 }
