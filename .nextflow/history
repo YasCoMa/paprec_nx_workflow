@@ -161,4 +161,4 @@
 2024-10-10 15:19:02	4.3s	angry_darwin	ERR	5ff15ca480e68a5fc2e48415d9ff1129	1aec3d29-b42b-423f-ad47-3624cddbd3d3	nextflow -log ../log_time_steps/ada_analysis_oct-10.log -bg run main.nf
 2024-10-10 15:20:43	3.8s	nostalgic_swirles	ERR	5ff15ca480e68a5fc2e48415d9ff1129	92015281-46dc-4c64-83d6-11626c96b9ac	nextflow -log ../log_time_steps/ada_analysis_oct-10.log -bg run main.nf
 2024-10-10 15:21:06	18m 23s	happy_plateau	OK	5ff15ca480e68a5fc2e48415d9ff1129	8e64edd1-fff8-421c-afcf-59f58bc449d7	nextflow -log ../log_time_steps/ada_analysis_oct-10.log -bg run main.nf
-2024-10-10 15:40:39	-	grave_poitras	-	5ff15ca480e68a5fc2e48415d9ff1129	0490c7ac-84e5-41ae-b21e-f56017b99df4	nextflow -log ../log_time_steps/ada_analysis_epitope_oct-10.log -bg run main.nf
+2024-10-10 15:40:39	3h 28m 52s	grave_poitras	OK	5ff15ca480e68a5fc2e48415d9ff1129	0490c7ac-84e5-41ae-b21e-f56017b99df4	nextflow -log ../log_time_steps/ada_analysis_epitope_oct-10.log -bg run main.nf

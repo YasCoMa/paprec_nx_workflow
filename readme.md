@@ -90,6 +90,9 @@ We have developed a comprehensive pipeline for comparing models used in antigeni
 	- **Run Evaluation:**
 		- ````nextflow run main.nf --dataDir /path/to/paprec_data --runningConfig /path/to/running_config.json --mode train --execution_step 3````
 	- **Run Prediction:**
+		- In the chosen dataDir, uncompress the trained model folders in the link https://www.dropbox.com/scl/fi/jfxkdp423lm2cs72ljm1z/models_data.tar.xz?rlkey=2ggl1jagkg5qlh6yf40brcniy&st=c40ru97j&dl=0
+		- in the best_trained_models folder, adjust the model_path key in each json file to add the prefix with dataDir path.
+		- Or run the training step before the prediction
 		- ````nextflow run main.nf --dataDir /path/to/paprec_data --runningConfig /path/to/running_config.json --mode test --execution_step 3````
 	- **Run AD Analysis (It assumes that the selected datasets finished the evaluation step):**
 		- ````nextflow run main.nf --dataDir /path/to/paprec_data --runningConfig /path/to/running_config.json --mode ada ````
