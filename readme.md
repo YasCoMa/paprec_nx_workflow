@@ -116,14 +116,11 @@ You can use the new dictionary keys in datasets and methods now in the runnning 
 
 #### Methodology used to obtain the current training datasets
 The current paprec version contains four main sources of training datasets: 
-    - HLA, which is a compiled collection of curated epitopes experimentally assessed for immune recognition
+- HLA, which is a compiled collection of curated epitopes experimentally assessed for immune recognition
 through cytokines such as IL-5, IL-17, or IL-10. Type: Epitope. Source: https://doi.org/10.1186/1471-2164-6-79
-	
-	- BciPep, it contains epitopes from b-cell experiments. Type: Epitope. Source: https://doi.org/10.1186/1471-2164-6-79
-	
-	- Protegen, it comprises whole protein sequences of bacteria. Type: Protein. Source: https://doi.org/10.1093/nar/gkq944
-	
-	- IEDB, A database of epitopes validated by assays and publications that is constantly being updated. It has mainly eptopes information, but provides the protein identifier from which it was predicted, so it is possible to prepare both protein and epitope datasets. Type: Both. Source: https://doi.org/10.1093%2Fnar%2Fgky1006
+- BciPep, it contains epitopes from b-cell experiments. Type: Epitope. Source: https://doi.org/10.1186/1471-2164-6-79
+- Protegen, it comprises whole protein sequences of bacteria. Type: Protein. Source: https://doi.org/10.1093/nar/gkq944	
+- IEDB, A database of epitopes validated by assays and publications that is constantly being updated. It has mainly eptopes information, but provides the protein identifier from which it was predicted, so it is possible to prepare both protein and epitope datasets. Type: Both. Source: https://doi.org/10.1093%2Fnar%2Fgky1006
 
 In the "raw_training_datasets" folder, there files containing the prepared set of sequences for each of the four above mentioned databases. hla and bcipep were directly extracted without further data processing. But for protegen, it provides only a positive set of proteins and it was not being updated since 2019. To address the negative part and the outdated data to use it to train models, we started by getting all the taxonomy ids of the organisms that were declared n the protein sequence identifiers. We manually classified each taxon as being of a gram+ or gram- bacteria.
 We augmented the positive set of proteins and epitopes, downloading iedb lists of linear epitopes that were not from b-cell type, for each taxon id. We selected either the ones that had positive or negative outcome in the assays. From these, we could derive positive and negative set of epitopes and their respective proteins.
