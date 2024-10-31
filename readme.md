@@ -97,12 +97,6 @@ We have developed a comprehensive pipeline for comparing models used in antigeni
 	- **Run AD Analysis (It assumes that the selected datasets finished the evaluation step):**
 		- ````nextflow run main.nf --dataDir /path/to/paprec_data --runningConfig /path/to/running_config.json --mode ada ````
 
-- Check the results obtained with those found in our article:
-    - Bcipep dataset: https://www.dropbox.com/s/8ezeup4xiwb9p7n/bcipep_dataset.zip?dl=0
-    - HLA dataset: https://www.dropbox.com/s/6vpfgvmsz9vd5r0/hla_dataset.zip?dl=0
-    - Gram+ dataset: https://www.dropbox.com/s/l5wqpcsp4qc6ret/gram%2B_dataset.zip?dl=0
-    - Gram- dataset: https://www.dropbox.com/s/cvzrhlselxj9sp5/gram-_dataset.zip?dl=0
-    
 ### Adding more modules:
 The goal is centralizing in the "raw_training_datasets" file curated training datasets that can be used for training and later prediction. The workflow was prepared to easily accept the addition of new datasets and methods.
 
@@ -122,10 +116,13 @@ You can use the new dictionary keys in datasets and methods now in the runnning 
 
 #### Methodology used to obtain the current training datasets
 The current paprec version contains four main sources of training datasets: 
-	- HLA, which is a compiled collection of curated epitopes experimentally assessed for immune recognition
+    - HLA, which is a compiled collection of curated epitopes experimentally assessed for immune recognition
 through cytokines such as IL-5, IL-17, or IL-10. Type: Epitope. Source: https://doi.org/10.1186/1471-2164-6-79
+	
 	- BciPep, it contains epitopes from b-cell experiments. Type: Epitope. Source: https://doi.org/10.1186/1471-2164-6-79
+	
 	- Protegen, it comprises whole protein sequences of bacteria. Type: Protein. Source: https://doi.org/10.1093/nar/gkq944
+	
 	- IEDB, A database of epitopes validated by assays and publications that is constantly being updated. It has mainly eptopes information, but provides the protein identifier from which it was predicted, so it is possible to prepare both protein and epitope datasets. Type: Both. Source: https://doi.org/10.1093%2Fnar%2Fgky1006
 
 In the "raw_training_datasets" folder, there files containing the prepared set of sequences for each of the four above mentioned databases. hla and bcipep were directly extracted without further data processing. But for protegen, it provides only a positive set of proteins and it was not being updated since 2019. To address the negative part and the outdated data to use it to train models, we started by getting all the taxonomy ids of the organisms that were declared n the protein sequence identifiers. We manually classified each taxon as being of a gram+ or gram- bacteria.
