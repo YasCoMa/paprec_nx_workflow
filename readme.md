@@ -23,7 +23,7 @@ We have developed a comprehensive pipeline for comparing models used in antigeni
 1. ````git clone https://github.com/YasCoMa/paprec_pipeline.git````
 2. ````cd paprec_pipeline````
 3. ````conda env create --file paprec_env.yml````
-4. Setup the environment variable with the path to the workflw directory: ```` export paprecPath="/path/to/paprec_workflow" ````
+4. Setup the environment variable with the path to the workflow directory: ```` export paprecPath="/path/to/paprec_workflow" ````
 5. The workflow requires four parameters, you can edit them in main.nf, or pass in the command line when you start the execution. The parameters are:
 	- **mode**: Indicates the goal of the workflow, 'train' or 'test'. It activates accordingly the steps according to the mode.
 	- **execution_step**: If 0 it runs all the steps of the workflow, the other options can be as described below.
@@ -127,6 +127,7 @@ We augmented the positive set of proteins and epitopes, downloading iedb lists o
 With the taxon ids, we also looked in uniprot for their proteomes, and the respective proteins were classified as negative if they had a match of less then 30% of identity and if none of th epositive epitopes of the golden bacteria set were not found with exact match in them. This step helped to increase the negative set of proteins, for gram+ and gram- bacteria.
 
 ## Reference
+Martins YC, Cerqueira E Costa MO, Palumbo MC, F Do Porto D, Custódio FL, Trevizani R, Nicolás MF. PAPreC: A Pipeline for Antigenicity Prediction Comparison Methods across Bacteria. ACS Omega. 2025 Feb 3;10(6):5415-5429. doi: 10.1021/acsomega.4c07147. PMID: 39989760; PMCID: PMC11840615.
 
 ## Bug Report
 Please, use the [Issues](https://github.com/YasCoMa/paprec_pipeline/issues) tab to report any bug.
