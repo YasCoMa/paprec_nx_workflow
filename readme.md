@@ -20,8 +20,8 @@ We have developed a comprehensive pipeline for comparing models used in antigeni
 
 ## Usage Instructions
 ### Preparation:
-1. ````git clone https://github.com/YasCoMa/paprec_pipeline.git````
-2. ````cd paprec_pipeline````
+1. ````git clone https://github.com/YasCoMa/paprec_nx_workflow.git````
+2. ````cd paprec_nx_workflow````
 3. ````conda env create --file paprec_env.yml````
 4. Setup the environment variable with the path to the workflow directory: ```` export paprecPath="/path/to/paprec_workflow" ````
 5. The workflow requires four parameters, you can edit them in main.nf, or pass in the command line when you start the execution. The parameters are:
