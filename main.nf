@@ -46,28 +46,34 @@ process setEnvironment {
 
 workflow {
     result = setEnvironment()
-
+    
     if( params.mode == "test" ){
         if( params.execution_step == 1 | params.execution_step == 0 ){
-            result = DataSelection_STEP( params.dataDir, params.runningConfig, params.mode, result )
+            result1 = DataSelection_STEP( params.dataDir, params.runningConfig, params.mode, result )
         }
     }
     
     if( params.mode == "train" | params.mode == "test" ){
         if( params.execution_step == 2 | params.execution_step == 0 ){
-            result = FeaturesExtraction_STEP( params.dataDir, params.runningConfig, params.mode, result  )
+            result2 = FeaturesExtraction_STEP( params.dataDir, params.runningConfig, params.mode, result  )
         }
     }
 
     if( params.mode == "train" ){
-        if( params.execution_step == 3 | params.execution_step == 0 ){
+        if( params.execution_step == 3 ){
             result = Evaluation_STEP( params.dataDir, params.runningConfig, params.mode, result  )
+        }
+        if( params.execution_step == 0 ){
+            result = Evaluation_STEP( params.dataDir, params.runningConfig, params.mode, result2  )
         }
     }
 
     if( params.mode == "test" ){
-        if( params.execution_step == 3 | params.execution_step == 0 ){
+        if( params.execution_step == 3 ){
             result = Prediction_STEP( params.dataDir, params.runningConfig, params.mode, result  )
+        }
+        if( params.execution_step == 0 ){
+            result = Prediction_STEP( params.dataDir, params.runningConfig, params.mode, result1  )
         }
     }
 

@@ -1,6 +1,7 @@
 name: paprec
 channels:
   - bioconda
+  - salilab
   - conda-forge
   - defaults
 dependencies:
@@ -141,7 +142,6 @@ dependencies:
   - itsdangerous=2.2.0=pyhd8ed1ab_0
   - jedi=0.19.1=pyhd8ed1ab_0
   - jinja2=3.1.4=pyhd8ed1ab_0
-  - joblib=1.4.2=pyhd8ed1ab_0
   - jupyterlab_widgets=3.0.13=pyhd8ed1ab_0
   - keyutils=1.6.1=h166bdaf_0
   - kiwisolver=1.4.7=py310h3788b33_0
@@ -230,7 +230,6 @@ dependencies:
   - markdown=3.6=pyhd8ed1ab_0
   - markdown-it-py=3.0.0=pyhd8ed1ab_0
   - markupsafe=2.1.5=py310ha75aee5_1
-  - matplotlib-base=3.9.2=py310h68603db_1
   - matplotlib-inline=0.1.7=pyhd8ed1ab_0
   - mdurl=0.1.2=pyhd8ed1ab_0
   - miniful=0.0.6=pyhd8ed1ab_0
@@ -267,7 +266,6 @@ dependencies:
   - opentelemetry-semantic-conventions=0.37b0=pyhd8ed1ab_0
   - orc=2.0.2=h669347b_0
   - packaging=24.1=pyhd8ed1ab_0
-  - pandas=2.2.3=py310h5eaa309_1
   - pandas-profiling=3.0.0=pyhd8ed1ab_0
   - pango=1.54.0=h4c5309f_1
   - paramiko=3.5.0=pyhd8ed1ab_0
@@ -316,7 +314,6 @@ dependencies:
   - pyasn1=0.6.1=pyhd8ed1ab_1
   - pyasn1-modules=0.4.1=pyhd8ed1ab_0
   - pybind11-abi=4=hd8ed1ab_3
-  - pycaret=2.2.3=pyhd3deb0d_0
   - pycparser=2.22=pyhd8ed1ab_0
   - pydantic=2.9.2=pyhd8ed1ab_0
   - pydantic-core=2.23.4=py310h505e2c1_0
@@ -356,8 +353,6 @@ dependencies:
   - rsa=4.9=pyhd8ed1ab_0
   - s2n=1.5.3=h7b32b05_0
   - safetensors=0.4.5=py310h505e2c1_0
-  - scikit-learn=1.5.2=py310h27f47ee_1
-  - scipy=1.14.1=py310ha3fb0e1_0
   - seaborn=0.13.2=hd8ed1ab_2
   - seaborn-base=0.13.2=pyhd8ed1ab_2
   - setuptools=74.1.2=pyhd8ed1ab_0
@@ -438,4 +433,44 @@ dependencies:
   - zlib=1.3.1=h4ab18f5_1
   - zstandard=0.23.0=py310ha39cb0e_1
   - zstd=1.5.6=ha6fb4c9_0
+  - pip:
+      - category-encoders==2.7.0
+      - choreographer==1.2.0
+      - cython==3.2.0
+      - dash==3.2.0
+      - deprecation==2.1.0
+      - fastjsonschema==2.21.2
+      - iniconfig==2.3.0
+      - joblib==1.3.2
+      - jsonschema==4.25.1
+      - jsonschema-specifications==2025.9.1
+      - jupyter-core==5.9.1
+      - kaleido==1.2.0
+      - logistro==2.0.1
+      - matplotlib==3.7.5
+      - nbformat==5.10.4
+      - nest-asyncio==1.6.0
+      - orjson==3.11.4
+      - pandas==2.1.4
+      - platformdirs==4.5.0
+      - plotly-resampler==0.11.0
+      - pluggy==1.6.0
+      - pmdarima==2.0.4
+      - psutil==7.1.3
+      - pycaret==3.3.2
+      - pytest==8.4.2
+      - pytest-timeout==2.4.0
+      - referencing==0.37.0
+      - rpds-py==0.28.0
+      - schemdraw==0.15
+      - scikit-base==0.7.8
+      - scikit-learn==1.4.2
+      - scikit-plot==0.3.7
+      - scipy==1.11.4
+      - simplejson==3.20.2
+      - sktime==0.26.0
+      - tbats==1.1.3
+      - tomli==2.3.0
+      - tsdownsample==0.1.4.1
+      - wurlitzer==3.1.1
 prefix: /aloy/home/ymartins/miniconda3/envs/paprec

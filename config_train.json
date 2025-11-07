@@ -1,0 +1,16 @@
+{
+	"datasets": ["hla", "bcipep", "gram+_epitope", "gram-_epitope", "gram+_protein", "gram-_protein", "allgram_epitope", "allgram_protein"],
+	"methods": ["aln_free_e_descriptors", "aln_free_aaindex_descriptors", "aln_free_esm2_embedding"],
+	"experiment_combinations": [ 
+		{
+			"task": "train", 
+			"is_all_against_all": true,
+			"imbalance_treatment": "downsampling",
+			"rank_metric": "mcc",
+			"pairs": [ 
+				{ "dataset": "hla", "method": "aln_free_e_descriptors" },
+				{ "dataset": "hla", "method": "aln_free_aaindex_descriptors" }
+			] 
+		}
+	]
+}
