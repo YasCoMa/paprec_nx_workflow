@@ -18,7 +18,7 @@ We'd also love PRs. If you're thinking of a large PR, we advise opening up an is
 ## Submitting a pull request
 
 1. [Fork][fork] and clone the repository.
-2. Configure and install the dependencies: `pip3 install -r requirements.txt`.
+2. Configure and install the dependencies: `conda env create --file paprec_env.yml`.
 3. Create a new branch: `git checkout -b my-branch-name`.
 4. Make your change, add tests, and make sure the tests still pass.
 5. Push to your fork and [submit a pull request][pr].
